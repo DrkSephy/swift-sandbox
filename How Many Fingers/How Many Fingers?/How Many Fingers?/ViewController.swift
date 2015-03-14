@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         var randomNumber = arc4random_uniform(6);
         var guessInt = guess.text.toInt();
         if (guessInt != nil) {
+            // We convert randomNumer from UINT32 to int
+            if Int(randomNumber) == guessInt {
+                resultLabel.text = "Correct!";
+            } else {
+                resultLabel.text = "Nope! It was \(randomNumber)";
+            }
             
         } else {
             resultLabel.text = "Please enter a number 0-5";
