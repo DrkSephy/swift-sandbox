@@ -21,3 +21,12 @@ if myName == "David" || time < 20 {
 
 var remainder = 9 % 2;
 
+/* CHALLENGE */
+
+var x:Int = 4;
+
+if x % 2 == 0 {
+    println("Value is even!")
+} else {
+    println("Value is odd!");
+}
