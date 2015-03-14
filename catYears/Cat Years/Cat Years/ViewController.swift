@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         if enteredAge != nil {
             var catYears = enteredAge! * 7;
             resultLabel.text = "Your cat is \(catYears)";
+        } else {
+            resultLabel.text = "Please enter a number in the box"
         }
     }
     
