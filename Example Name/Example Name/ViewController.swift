@@ -12,11 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
     
+    @IBAction func buttonPressed(sender: AnyObject) {
+        myLabel.text = "It Worked!";
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        myLabel.text = "It Worked!";
         
         println("Hello World!");
         
