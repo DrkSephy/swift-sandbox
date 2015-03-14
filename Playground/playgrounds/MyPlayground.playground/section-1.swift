@@ -81,7 +81,7 @@ arr.removeAtIndex(2);
 arr.removeLast();
 
 // Remove a range of values
-arr.removeRange(1...2);
+// arr.removeRange(1...2);
 
 // We can have an array with multiple types
 var newArr = [1, 2.3, "David"];
@@ -97,7 +97,7 @@ var dict = ["name": "David", "age" : 24, "gender": "male"];
 // Optional is a type meaning "this variable may/or may not have a value. 
 // Swift doesn't know if dict["name"] will have a value at this point.
 // We can unwrap it using ! to force Swift to return a value
-println(dict["name"]!);
+// println(dict["name"]!);
 
 dict["hairColor"] = "black";
 dict["age"] = 25;
@@ -108,11 +108,16 @@ dict["age"] = "old";
 // var myString = "My name is " + dict["name"];
 
 var newName = dict["name"];
-var myNewString = "My name is \(newName!)";
+// var myNewString = "My name is \(newName!)";
 
 // OR
 
-var myNewestString = "My name is \(dict[name]!)";
+// var myNewestString = "My name is \(dict[name]!)";
+
+/* ARRAY CHALLENGE */
+var challengeArray = [2, 4, 6, 8];
+challengeArray.removeAtIndex(0);
+challengeArray.append(10);
 
 
 
