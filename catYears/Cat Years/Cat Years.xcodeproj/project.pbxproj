@@ -13,6 +13,7 @@
 		932ADCAD1AB3C38900D93599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932ADCAC1AB3C38900D93599 /* Images.xcassets */; };
 		932ADCB01AB3C38900D93599 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932ADCAE1AB3C38900D93599 /* LaunchScreen.xib */; };
 		932ADCBC1AB3C38A00D93599 /* Cat_YearsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ADCBB1AB3C38A00D93599 /* Cat_YearsTests.swift */; };
+		932ADCC61AB3C57400D93599 /* sakamotocat.png in Resources */ = {isa = PBXBuildFile; fileRef = 932ADCC51AB3C57400D93599 /* sakamotocat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		932ADCB51AB3C38A00D93599 /* Cat YearsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cat YearsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		932ADCBA1AB3C38A00D93599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		932ADCBB1AB3C38A00D93599 /* Cat_YearsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat_YearsTests.swift; sourceTree = "<group>"; };
+		932ADCC51AB3C57400D93599 /* sakamotocat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sakamotocat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				932ADCA51AB3C38900D93599 /* AppDelegate.swift */,
 				932ADCA71AB3C38900D93599 /* ViewController.swift */,
 				932ADCA91AB3C38900D93599 /* Main.storyboard */,
+				932ADCC51AB3C57400D93599 /* sakamotocat.png */,
 				932ADCAC1AB3C38900D93599 /* Images.xcassets */,
 				932ADCAE1AB3C38900D93599 /* LaunchScreen.xib */,
 				932ADCA31AB3C38900D93599 /* Supporting Files */,
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932ADCAB1AB3C38900D93599 /* Main.storyboard in Resources */,
+				932ADCC61AB3C57400D93599 /* sakamotocat.png in Resources */,
 				932ADCB01AB3C38900D93599 /* LaunchScreen.xib in Resources */,
 				932ADCAD1AB3C38900D93599 /* Images.xcassets in Resources */,
 			);
