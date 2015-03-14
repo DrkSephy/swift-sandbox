@@ -119,7 +119,12 @@ var challengeArray = [2, 4, 6, 8];
 challengeArray.removeAtIndex(0);
 challengeArray.append(10);
 
+/* DICTIONARY CHALLENGE */
 
+var challengeDict = ["name": "David", "age": 24];
+var challengeName = challengeDict["name"];
+var challengeAge = challengeDict["age"];
+var challengeString = "My name is \(challengeName!) and my age is \(challengeAge)";
 
 
 
