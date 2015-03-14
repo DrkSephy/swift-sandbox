@@ -1,8 +1,9 @@
-// Playground - noun: a place where people can play
+// David Leonard
+// Swift playground, containing my notes as I go along in Swift
 
 import UIKit
 
-/* Strings*/
+/* STRINGS */
 
 // Create a variable
 var str = "Hello, playground";
@@ -21,7 +22,7 @@ name = "Lisa";
 var unknownString:String
 unknownString = "3";
 
-/* Integers */
+/* INTEGERS */
 
 // Integers are useful when we know our input will only be whole numbers
 var int = 4;
@@ -34,4 +35,26 @@ var b:Int = a * 5;
 // resulting in 2 and truncating the decimal.
 // To fix this, we use a DOUBLE.
 var c:Double = 5 / 2;
-c * 2;
+
+// Swift will not allow you to multiply an integer with a double
+// c * int;
+
+// Fix this by casting the variable int to a double:
+c * Double(int);
+
+// String concatenation
+var longSentence = str + " " + name;
+
+// Embed integer into a string
+var newString = "My cat is \(int)";
+
+/* Random exercise */
+// Create 3 variables
+var first:Double = 3.5;
+var second:Int = 4;
+var third:Double = first * Double(second);
+// Make a sentence containing the numbers and the result
+var multString = "\(first)" + " multipled by " + "\(second)" + " is equal to " + "\(third)";
+
+
+
