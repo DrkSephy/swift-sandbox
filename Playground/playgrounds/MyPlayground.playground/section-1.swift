@@ -92,6 +92,20 @@ var emptyArr:[Int];
 // So we cannot push wrongly typed values into the array
 // var emptyArr.push(1.2)
 
+// NOTE: An array is ordered, and a dictionary is not
+var dict = ["name": "David", "age" : 24, "gender": "male"];
+// Optional is a type meaning "this variable may/or may not have a value. 
+// Swift doesn't know if dict["name"] will have a value at this point.
+// We can unwrap it using ! to force Swift to return a value
+println(dict["name"]!);
+
+dict["hairColor"] = "black";
+dict["age"] = 25;
+println(dict);
+dict["age"] = "old";
+
+
+
 
 
 
