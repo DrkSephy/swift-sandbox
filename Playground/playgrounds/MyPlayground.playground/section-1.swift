@@ -121,6 +121,7 @@ challengeArray.append(10);
 
 /* DICTIONARY CHALLENGE */
 
+
 var challengeDict = ["name": "David", "age": 24];
 var challengeName = challengeDict["name"];
 var challengeAge = challengeDict["age"];
