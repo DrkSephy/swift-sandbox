@@ -3,7 +3,9 @@
 
 import UIKit
 
-/* STRINGS */
+/**************
+*   STRINGS   *
+**************/
 
 // Create a variable
 var str = "Hello, playground";
@@ -22,7 +24,9 @@ name = "Lisa";
 var unknownString:String
 unknownString = "3";
 
-/* INTEGERS */
+/***************
+*   INTEGERS   *
+***************/
 
 // Integers are useful when we know our input will only be whole numbers
 var int = 4;
@@ -55,6 +59,49 @@ var second:Int = 4;
 var third:Double = first * Double(second);
 // Make a sentence containing the numbers and the result
 var multString = "\(first)" + " multipled by " + "\(second)" + " is equal to " + "\(third)";
+
+/****************
+*    ARRAYS     *
+****************/
+
+// Define an array
+var arr = [1, 2, 3, 4, 5];
+
+// Arrays in Swift are 0th based
+// Get element 4
+arr[3];
+
+// Append new element to end of array
+arr.append(6);
+
+// Remove value 3
+arr.removeAtIndex(2);
+
+// Remove last value
+arr.removeLast();
+
+// Remove a range of values
+arr.removeRange(1...2);
+
+// We can have an array with multiple types
+var newArr = [1, 2.3, "David"];
+
+// Declare empty array - we need to specify the type of values in the array
+var emptyArr:[Int];
+
+// So we cannot push wrongly typed values into the array
+// var emptyArr.push(1.2)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
