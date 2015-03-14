@@ -104,6 +104,15 @@ dict["age"] = 25;
 println(dict);
 dict["age"] = "old";
 
+// We cannot do this
+// var myString = "My name is " + dict["name"];
+
+var newName = dict["name"];
+var myNewString = "My name is \(newName!)";
+
+// OR
+
+var myNewestString = "My name is \(dict[name]!)";
 
 
 
