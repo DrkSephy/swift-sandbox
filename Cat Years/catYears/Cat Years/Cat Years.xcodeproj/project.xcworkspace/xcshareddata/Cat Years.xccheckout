@@ -14,11 +14,11 @@
 		<string>https://github.com/DrkSephy/swift-sandbox.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>catYears/Cat Years/Cat Years.xcodeproj</string>
+	<string>Cat Years/catYears/Cat Years/Cat Years.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>11B70353C2ABE66179EF03EA72C5FAA2A38C5C99</key>
-		<string>../../../..</string>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/DrkSephy/swift-sandbox.git</string>
