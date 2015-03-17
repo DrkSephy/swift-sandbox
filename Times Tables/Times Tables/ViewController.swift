@@ -10,10 +10,15 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var table: UITableView!
+    
     @IBOutlet weak var sliderValue: UISlider!
+    
     @IBAction func sliderMoved(sender: AnyObject) {
-        println(sliderValue);
+        // Create a new table whenever the slider updates
+        table.reloadData();
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell");
         let timesTable = Int(sliderValue.value * 20);
         cell.textLabel?.text = String(timesTable * indexPath.row);
-        return cell; 
+        return cell;
     }
 
     override func didReceiveMemoryWarning() {

@@ -54,6 +54,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="sliderValue" destination="wa2-dk-URV" id="Rbc-QW-5tu"/>
+                        <outlet property="table" destination="wJL-uD-fLw" id="0w0-sU-kuv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
