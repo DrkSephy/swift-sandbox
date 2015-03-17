@@ -24,12 +24,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var time: UILabel!
     
     @IBAction func pause(sender: AnyObject) {
-    
+        // Pause timer
+        timer.invalidate();
     }
     
     
     @IBAction func stop(sender: AnyObject) {
-    
+        
     }
     
     /* Play button logic */
