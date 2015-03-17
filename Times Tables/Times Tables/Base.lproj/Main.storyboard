@@ -23,11 +23,31 @@
                                     <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fLd-35-rA0"/>
                                 </connections>
                             </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wJL-uD-fLw">
+                                <rect key="frame" x="0.0" y="77" width="325" height="491"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="nRq-bv-K7D">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nRq-bv-K7D" id="1s2-YG-2tO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="CTN-YZ-g2a"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Dqe-Tm-eio"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wJL-uD-fLw" firstAttribute="top" secondItem="wa2-dk-URV" secondAttribute="bottom" constant="8" id="56P-wE-ZGI"/>
                             <constraint firstItem="wa2-dk-URV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="19" id="6Wq-2T-6Yh"/>
+                            <constraint firstItem="wJL-uD-fLw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="jX9-Ms-05C"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wJL-uD-fLw" secondAttribute="bottom" id="nDn-Pm-tdo"/>
                             <constraint firstItem="wa2-dk-URV" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="q6G-Rx-rxu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wJL-uD-fLw" secondAttribute="trailing" constant="-21" id="t4r-D8-kA7"/>
                             <constraint firstItem="wa2-dk-URV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zKs-ii-kjg"/>
                         </constraints>
                     </view>
