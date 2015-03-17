@@ -12,6 +12,13 @@ class ViewController: UIViewController {
 
     var timer  = NSTimer();
     
+    var count = 0;
+    
+    func result() {
+        count++;
+        println(count);
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +28,7 @@ class ViewController: UIViewController {
            selector: the function we will call
             - selectors map to a function we want to call whenever the timer ticks
         */
+        
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true);
     }
 
