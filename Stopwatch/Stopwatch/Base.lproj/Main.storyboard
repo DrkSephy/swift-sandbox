@@ -21,19 +21,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Stopwatch" id="reS-Vg-CYt">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="8Gk-rn-qOn"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="8Gk-rn-qOn">
+                                            <connections>
+                                                <action selector="pause:" destination="vXZ-lx-hvc" id="BCy-yf-s2r"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-CG-19w">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="stop" id="w4J-YD-1Wo"/>
+                                    <barButtonItem systemItem="stop" id="w4J-YD-1Wo">
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" id="EVg-69-wBa"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="D3W-Ac-Tuo"/>
-                                    <barButtonItem systemItem="play" id="DK2-3H-HQU"/>
+                                    <barButtonItem systemItem="play" id="DK2-3H-HQU">
+                                        <connections>
+                                            <action selector="play:" destination="vXZ-lx-hvc" id="8x7-kt-K5D"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-CY-aYc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-CY-aYc">
                                 <rect key="frame" x="60" y="201" width="200" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="mPy-RY-P2A"/>
@@ -57,6 +69,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="time" destination="dvz-CY-aYc" id="qyw-L7-HaD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
