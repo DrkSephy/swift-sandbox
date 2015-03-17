@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-UU-483">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-UU-483">
                                 <rect key="frame" x="0.0" y="45" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="tGa-Gt-p2M"/>
+                                    <constraint firstAttribute="height" constant="44" id="zAw-3l-Zr2"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Navigation App" id="tj2-xw-9Oo">
                                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="gMr-5w-5Bf"/>
@@ -25,8 +30,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxT-Rp-dFM">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="yo2-9j-Bqa"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aO5-QC-h04"/>
+                                    <barButtonItem title="Item" id="fJs-EQ-ght"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UxT-Rp-dFM" secondAttribute="trailing" constant="-16" id="8Dg-mT-As5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sfd-UU-483" secondAttribute="trailing" constant="-16" id="Djy-1u-uqn"/>
+                            <constraint firstItem="sfd-UU-483" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="ELT-cn-UZr"/>
+                            <constraint firstItem="UxT-Rp-dFM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="OMp-87-bUh"/>
+                            <constraint firstItem="sfd-UU-483" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="U7V-dA-gkK"/>
+                            <constraint firstItem="sfd-UU-483" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="W0f-U1-wdw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UxT-Rp-dFM" secondAttribute="bottom" id="aul-fW-fH0"/>
+                            <constraint firstItem="sfd-UU-483" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="lrA-fZ-snF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sfd-UU-483" secondAttribute="trailing" constant="-16" id="wND-XR-EXf"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
