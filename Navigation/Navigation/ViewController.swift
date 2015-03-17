@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var timer  = NSTimer();
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        /* Create a timer */
+        /* target: the function calling this method 
+           selector: the function we will call
+            - selectors map to a function we want to call whenever the timer ticks
+        */
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true);
     }
 
     override func didReceiveMemoryWarning() {
