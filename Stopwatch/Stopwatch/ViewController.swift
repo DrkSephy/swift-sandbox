@@ -30,7 +30,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func stop(sender: AnyObject) {
-        
+        // Pause and reset timer
+        timer.invalidate();
+        count = 0;
+        time.text = "0";
     }
     
     /* Play button logic */
