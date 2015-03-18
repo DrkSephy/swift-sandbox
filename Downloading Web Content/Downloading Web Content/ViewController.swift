@@ -27,8 +27,13 @@ class ViewController: UIViewController {
                 // Convert data to a readable String, not the original hex
                 var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding);
                 println(urlContent);
-                // Use self. to use anything in the closure
-                self.webView.loadHTMLString(urlContent!, baseURL: nil);
+                // This will stop waiting for anything else to happen, and will perform the update straight away
+                dispatch_async(dispatch_get_main_queue()){
+                    
+                
+                    // Use self. to use anything in the closure
+                    self.webView.loadHTMLString(urlContent!, baseURL: nil);
+                }
             }
             
         }
