@@ -26,6 +26,20 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return toDoList.count;
+    }
+    
+
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell");
+        // Get the 0th, 1st, 2nd element, etc
+        cell.textLabel?.text = toDoList[indexPath.row];
+        
+        return cell; 
+    }
 
 }
 
