@@ -27,6 +27,18 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Allows the user to tap outside of the keyboard to close the keyboard down
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true);
+    }
+    
+    
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        item.resignFirstResponder();
+        return true;
+    }
 
 
 }

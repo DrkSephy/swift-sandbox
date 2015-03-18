@@ -38,8 +38,12 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         // Get the 0th, 1st, 2nd element, etc
         cell.textLabel?.text = toDoList[indexPath.row];
         
-        return cell; 
+        return cell;
     }
 
+    // Whenever the user swipes, we want to reload the table
+   override func viewDidAppear(animated: Bool) {
+    toDoListTable.reloadData();
+    }
 }
 
