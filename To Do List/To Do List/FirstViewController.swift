@@ -8,8 +8,14 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+// Create a global variable accessible to both view controllers
+var toDoList = [String]();
 
+class FirstViewController: UIViewController, UITableViewDelegate {
+
+    
+    
+    @IBOutlet weak var toDoListTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
