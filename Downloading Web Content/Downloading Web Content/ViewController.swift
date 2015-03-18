@@ -23,7 +23,9 @@ class ViewController: UIViewController {
             (data, response, error) in
             // Check if there was an error with fetching the data
             if error == nil {
-                println(data);
+                // Convert data to a readable String, not the original hex
+                var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding);
+                println(urlContent);
             }
             
         }
