@@ -46,9 +46,22 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         return cell;
     }
 
+    // This method will be called whenever the user tries to edit the table
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // Check for swipe to the left to remove an item from the table
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            toDoList.removeAtIndex(indexPath.row);
+            // We also need to update the array in NSDefaults
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList");
+            // Update our table
+            toDoListTable.reloadData();
+        }
+        
+    }
+    
     // Whenever the user swipes, we want to reload the table
    override func viewDidAppear(animated: Bool) {
-    toDoListTable.reloadData();
-    }
+        toDoListTable.reloadData();
+   }
 }
 
