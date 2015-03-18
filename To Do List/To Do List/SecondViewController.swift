@@ -16,6 +16,9 @@ class SecondViewController: UIViewController {
         toDoList.append(item.text);
         item.text = "";
         
+        // Whenever a user adds a new item, update the user defaults
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList");
+        
     }
     
     override func viewDidLoad() {
