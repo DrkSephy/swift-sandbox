@@ -19,9 +19,18 @@ class ViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setObject("David", forKey: "name");
         
         // How do we get the data back?
-        var name = NSUserDefaults.standardUserDefaults().objectForKey("name")!;
+        // We will make this value to be a string
+        var name = NSUserDefaults.standardUserDefaults().objectForKey("name")! as String;
         
         println(name);
+        
+        /* Challenge : Store an array */
+        var arr = [1, 2, 3];
+        // Even if we comment this line out, the data will still be stored
+        NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "array");
+        var recalledArray = NSUserDefaults.standardUserDefaults().objectForKey("array")! as NSArray;
+        
+        println(recalledArray[2]);
     }
 
     override func didReceiveMemoryWarning() {
