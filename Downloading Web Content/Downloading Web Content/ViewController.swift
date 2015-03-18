@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,10 +27,13 @@ class ViewController: UIViewController {
                 // Convert data to a readable String, not the original hex
                 var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding);
                 println(urlContent);
+                // Use self. to use anything in the closure
+                self.webView.loadHTMLString(urlContent!, baseURL: nil);
             }
             
         }
         // Run the task
+        // This is actually an asynchronous call
         task.resume();
         
     }
