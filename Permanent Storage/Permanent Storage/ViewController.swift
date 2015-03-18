@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Store specific data relative to the user
+        // This will create a key inside of user defaults with the value - David
+        NSUserDefaults.standardUserDefaults().setObject("David", forKey: "name");
+        
+        // How do we get the data back?
+        var name = NSUserDefaults.standardUserDefaults().objectForKey("name")!;
+        
+        println(name);
     }
 
     override func didReceiveMemoryWarning() {
