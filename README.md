@@ -21,6 +21,7 @@ Before developing an application, there are test demonstrations which help explo
 * [Permanent Storage](https://github.com/DrkSephy/swift-sandbox/tree/master/Permanent%20Storage): A test application which demonstrates and explores how to store data whenever the application is shut down and resume. 
 * [Navigation](https://github.com/DrkSephy/swift-sandbox/tree/master/Navigation): A test application for working with navigating through an application. 
 * [Playgrounds](https://github.com/DrkSephy/swift-sandbox/tree/master/Playground/playgrounds): A set of Swift playgrounds for experimenting with the Swift programming constructs, such as loops, control statements, functions, etc. Playgrounds are great for writing functionality before porting it over to an iOS application - constantly reloading the application to test a change is time-consuming and not terribly efficient.
+* [Table Views](https://github.com/DrkSephy/swift-sandbox/tree/master/Table%20Views): A sample application for learning to use Table Views and Prototype cells, as well as the code needed to display and edit content on a table. 
 
 ### Notes
 
