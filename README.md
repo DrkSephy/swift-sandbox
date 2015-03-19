@@ -14,4 +14,14 @@ As of this moment, the following applications can be found on this repository:
 * [Times Tables](https://github.com/DrkSephy/swift-sandbox/tree/master/Times%20Tables): A single-view iOS application which displays a times table for numbers 1-20 using a slider to control the value. 
 * [To Do List](https://github.com/DrkSephy/swift-sandbox/tree/master/To%20Do%20List): A tabbed iOS application which allows the user to input a list item on the second tab, and enter it using a button. The first tab displays the items, which can be deleted by swiping left. This application also has the ability to save entries, and will persist the items when the application is turned off and resumed. 
 
+### Feature Tests
 
+Before developing an application, there are test demonstrations which help explore a new feature using Swift + the iOS development SDK on XCode. The list of demo projects are listed below:
+
+* [Permanent Storage](https://github.com/DrkSephy/swift-sandbox/tree/master/Permanent%20Storage): A test application which demonstrates and explores how to store data whenever the application is shut down and resume. 
+* [Navigation](https://github.com/DrkSephy/swift-sandbox/tree/master/Navigation): A test application for working with navigating through an application. 
+* [Playgrounds](https://github.com/DrkSephy/swift-sandbox/tree/master/Playground/playgrounds): A set of Swift playgrounds for experimenting with the Swift programming constructs, such as loops, control statements, functions, etc. Playgrounds are great for writing functionality before porting it over to an iOS application - constantly reloading the application to test a change is time-consuming and not terribly efficient.
+
+### Notes
+
+Throughout the course of development, I will try to keep my developer notes up to date. These notes will contain things that I've learned while working on these applications, as well as for my own personal reference. 
