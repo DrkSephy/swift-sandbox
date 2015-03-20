@@ -16,6 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var alienImage: UIImageView!
     
     @IBAction func updateImage(sender: AnyObject) {
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad();
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("doAnimation"), userInfo: nil, repeats: true);
+    }
+    
+    func doAnimation() {
         if counter == 5 {
             counter = 1;
         } else {
@@ -24,11 +33,6 @@ class ViewController: UIViewController {
         }
         // Update image on click
         alienImage.image = UIImage(named: "frame\(counter).png");
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad();
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("doAnimation"), userInfo: nil, repeats: true);
     }
 
     override func didReceiveMemoryWarning() {
