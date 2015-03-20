@@ -27,4 +27,4 @@ Before developing an application, there are test demonstrations which help explo
 
 ### Notes
 
-Throughout the course of development, I will try to keep my developer notes up to date. These notes will contain things that I've learned while working on these applications, as well as for my own personal reference. 
+Throughout the course of development, I will try to keep my developer notes up to date. These notes will contain things that I've learned while working on these applications, as well as for my own personal reference. You may find the notes [here](https://github.com/DrkSephy/swift-sandbox/tree/master/Notes).
