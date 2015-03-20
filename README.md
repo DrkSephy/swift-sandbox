@@ -12,7 +12,8 @@ As of this moment, the following applications can be found on this repository:
 * [Primality Testing](https://github.com/DrkSephy/swift-sandbox/tree/master/Primality): A single-view iOS application which allows the user to enter an integer, press a button and it will return whether or not the number if prime. 
 * [Stopwatch](https://github.com/DrkSephy/swift-sandbox/tree/master/Stopwatch): A single-view iOS application which acts as a stopwatch which ticks every second. The user can pause, resume and reset the stopwatch.
 * [Times Tables](https://github.com/DrkSephy/swift-sandbox/tree/master/Times%20Tables): A single-view iOS application which displays a times table for numbers 1-20 using a slider to control the value. 
-* [To Do List](https://github.com/DrkSephy/swift-sandbox/tree/master/To%20Do%20List): A tabbed iOS application which allows the user to input a list item on the second tab, and enter it using a button. The first tab displays the items, which can be deleted by swiping left. This application also has the ability to save entries, and will persist the items when the application is turned off and resumed. 
+* [To Do List](https://github.com/DrkSephy/swift-sandbox/tree/master/To%20Do%20List): A tabbed iOS application which allows the user to input a list item on the second tab, and enter it using a button. The first tab displays the items, which can be deleted by swiping left. This application also has the ability to save entries, and will persist the items when the application is turned off and resumed.
+* [What's the Weather?](https://github.com/DrkSephy/swift-sandbox/tree/master/Weather): An iOS application which grabs the weather forecast from `weather-forecast.com` and displays the weather to the user. 
 
 ### Feature Tests
 
@@ -22,6 +23,7 @@ Before developing an application, there are test demonstrations which help explo
 * [Navigation](https://github.com/DrkSephy/swift-sandbox/tree/master/Navigation): A test application for working with navigating through an application. 
 * [Playgrounds](https://github.com/DrkSephy/swift-sandbox/tree/master/Playground/playgrounds): A set of Swift playgrounds for experimenting with the Swift programming constructs, such as loops, control statements, functions, etc. Playgrounds are great for writing functionality before porting it over to an iOS application - constantly reloading the application to test a change is time-consuming and not terribly efficient.
 * [Table Views](https://github.com/DrkSephy/swift-sandbox/tree/master/Table%20Views): A sample application for learning to use Table Views and Prototype cells, as well as the code needed to display and edit content on a table. 
+* [Animations](https://github.com/DrkSephy/swift-sandbox/tree/master/Animations): A sample application to explore iOS animations. 
 
 ### Notes
 
