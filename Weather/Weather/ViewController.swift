@@ -13,19 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userCity: UITextField!
     
     @IBAction func findWeather(sender: AnyObject) {
-        
-    }
-    
-    @IBOutlet weak var resultLabel: UILabel!
-    
-    func showError() {
-        resultLabel.text = "Was not able to find weather for " + userCity.text + ". Please try again.";
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        var url = NSURL(string: "http://www.weather-forecast.com/locations/London/forecasts/latest");
+        var url = NSURL(string: "http://www.weather-forecast.com/locations/" + userCity.text.stringByReplacingOccurrencesOfString(" ", withString: "-") + "/forecasts/latest");
         // Check URL to make sure it exists
         if url != nil {
             let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {(data, response, error) -> Void in
@@ -41,6 +29,7 @@ class ViewController: UIViewController {
                         weather = weatherArray[0] as String;
                         weather = weather.stringByReplacingOccurrencesOfString("&deg;", withString: "º");
                         
+                        
                     } else {
                         urlError = true;
                     }
@@ -55,12 +44,23 @@ class ViewController: UIViewController {
                         self.resultLabel.text = weather;
                     }
                 }
-            
+                
             });
             task.resume();
         } else {
             showError();
         }
+
+    }
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    func showError() {
+        resultLabel.text = "Was not able to find weather for " + userCity.text + ". Please try again.";
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
