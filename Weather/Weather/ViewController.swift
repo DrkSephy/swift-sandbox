@@ -30,15 +30,27 @@ class ViewController: UIViewController {
         if url != nil {
             let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {(data, response, error) -> Void in
                 var urlError = false;
+                var weather = "";
                 if error == nil {
-                    var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding);
-                    println(urlContent);
+                    var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding) as NSString!;
+                    // urlContent(?) means we don't know what type it will be
+                    var urlContentArray = urlContent.componentsSeparatedByString("<span class=\"phrase\">");
+                    // Get the first matching phrase for what we are interested in
+                    if urlContentArray.count > 0 {
+                        var weatherArray = urlContentArray[1].componentsSeparatedByString("</span>");
+                        weather = weatherArray[0] as String;
+                        
+                    } else {
+                        urlError = true;
+                    }
                 } else {
                     urlError = true;
                 }
                 
                 if urlError == true {
                     self.showError();
+                } else {
+                    self.resultLabel.text = weather;
                 }
             
             });
