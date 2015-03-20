@@ -38,14 +38,16 @@ class ViewController: UIViewController {
         // Make alien appear off the screen, to the left
         // alienImage.center = CGPointMake(alienImage.center.x - 400, alienImage.center.y)
         // Fade image in
-        alienImage.alpha = 0;
+        // alienImage.alpha = 0;
+        alienImage.frame = CGRectMake(100, 20, 0, 0);
     }
     
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(1, animations: { () -> Void in
            // self.alienImage.center = CGPointMake(self.alienImage.center.x + 400, self.alienImage.center.y);
            // Fade image in
-            self.alienImage.alpha = 1; 
+           // self.alienImage.alpha = 1;
+            self.alienImage.frame = CGRectMake(100, 20, 100, 200);
         })
     }
 
