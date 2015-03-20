@@ -33,6 +33,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidLayoutSubviews() {
+        // Make alien appear off the screen, to the left
+        alienImage.center = CGPointMake(alienImage.center.x - 400, alienImage.center.y)
+    
+    
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.alienImage.center = CGPointMake(self.alienImage.center.x + 400, self.alienImage.center.y);
+        })
+    }
 
 
 }
