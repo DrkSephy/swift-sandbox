@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931A46A31ABBB9BF00DFD857 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 931A46A21ABBB9BF00DFD857 /* image.png */; };
 		936803001ABBB78100497E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936802FF1ABBB78100497E28 /* AppDelegate.swift */; };
 		936803021ABBB78100497E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936803011ABBB78100497E28 /* ViewController.swift */; };
 		936803051ABBB78100497E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936803031ABBB78100497E28 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		931A46A21ABBB9BF00DFD857 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		936802FA1ABBB78100497E28 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936802FE1ABBB78100497E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936802FF1ABBB78100497E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				936803011ABBB78100497E28 /* ViewController.swift */,
 				936803031ABBB78100497E28 /* Main.storyboard */,
 				936803061ABBB78100497E28 /* Images.xcassets */,
+				931A46A21ABBB9BF00DFD857 /* image.png */,
 				936803081ABBB78100497E28 /* LaunchScreen.xib */,
 				936802FD1ABBB78100497E28 /* Supporting Files */,
 			);
@@ -195,6 +198,7 @@
 				936803051ABBB78100497E28 /* Main.storyboard in Resources */,
 				9368030A1ABBB78100497E28 /* LaunchScreen.xib in Resources */,
 				936803071ABBB78100497E28 /* Images.xcassets in Resources */,
+				931A46A31ABBB9BF00DFD857 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				9368031B1ABBB78200497E28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9368031C1ABBB78200497E28 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				9368031E1ABBB78200497E28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
