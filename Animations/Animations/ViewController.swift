@@ -12,11 +12,19 @@ class ViewController: UIViewController {
 
     var counter = 1;
     var timer = NSTimer();
+    var isAnimating = true;
     
     @IBOutlet weak var alienImage: UIImageView!
     
     @IBAction func updateImage(sender: AnyObject) {
-        
+        if isAnimating == true {
+            // Cancel timer
+            timer.invalidate();
+            isAnimating = false;
+        } else {
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("doAnimation"), userInfo: nil, repeats: true);
+            isAnimating = true;
+        }
     }
     
     override func viewDidLoad() {

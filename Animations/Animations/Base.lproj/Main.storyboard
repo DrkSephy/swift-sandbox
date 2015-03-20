@@ -20,8 +20,8 @@
                                 <rect key="frame" x="-12" y="-123" width="375" height="617"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyE-YS-6V8">
-                                <rect key="frame" x="112" y="497" width="97" height="30"/>
-                                <state key="normal" title="Update Image">
+                                <rect key="frame" x="88" y="502" width="144" height="30"/>
+                                <state key="normal" title="Start/Stop Animation">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
