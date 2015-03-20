@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var counter = 1;
     @IBOutlet weak var alienImage: UIImageView!
     
     @IBAction func updateImage(sender: AnyObject) {
+        if counter == 5 {
+            counter = 1;
+        } else {
+            // Update frame
+            counter++;
+        }
         // Update image on click
-        alienImage.image = UIImage(named: "frame2.png");
+        alienImage.image = UIImage(named: "frame\(counter).png");
     }
     
     override func viewDidLoad() {
