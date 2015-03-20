@@ -39,6 +39,7 @@ class ViewController: UIViewController {
                     if urlContentArray.count > 0 {
                         var weatherArray = urlContentArray[1].componentsSeparatedByString("</span>");
                         weather = weatherArray[0] as String;
+                        weather = weather.stringByReplacingOccurrencesOfString("&deg;", withString: "º");
                         
                     } else {
                         urlError = true;
@@ -47,10 +48,12 @@ class ViewController: UIViewController {
                     urlError = true;
                 }
                 
-                if urlError == true {
-                    self.showError();
-                } else {
-                    self.resultLabel.text = weather;
+                dispatch_async(dispatch_get_main_queue()) {
+                    if urlError == true {
+                        self.showError();
+                    } else {
+                        self.resultLabel.text = weather;
+                    }
                 }
             
             });
