@@ -43,8 +43,28 @@ class ViewController: UIViewController, MKMapViewDelegate  {
         annotation.subtitle = "One day I'll go here..."
         map.addAnnotation(annotation);
         
+        // Create long press gesture recognizer to add a pin
+        // The colon at the end of action is to send the information that is sent when we do the long press
+        var longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "action:");
+        longPressRecognizer.minimumPressDuration = 2;
+        map.addGestureRecognizer(longPressRecognizer);
         
         
+    }
+    
+    func action(gestureRecognizer: UIGestureRecognizer){
+        println("Gesture recognized");
+        // Location where the user has done the long press in terms of the screen position
+        var touchPoint = gestureRecognizer.locationInView(self.map);
+        var newCoordinate : CLLocationCoordinate2D = map.convertPoint(touchPoint, toCoordinateFromView: self.map);
+        
+        // Adding annotations
+        var annotation = MKPointAnnotation();
+        
+        annotation.coordinate = newCoordinate;
+        annotation.title = "New Place";
+        annotation.subtitle = "One day I'll go here..."
+        map.addAnnotation(annotation);
     }
 
     override func didReceiveMemoryWarning() {
