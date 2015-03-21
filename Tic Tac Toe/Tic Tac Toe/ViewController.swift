@@ -13,20 +13,27 @@ class ViewController: UIViewController {
     // 1 = O, 2 = X
     var activePlayer = 1;
     
+    // State of the board
+    // 0 = empty
+    var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    
     @IBOutlet weak var button: UIButton!
 
     @IBAction func buttonPressed(sender: AnyObject) {
-        var image = UIImage();
-        if activePlayer == 1 {
-            image = UIImage(named: "nought.png")!;
-            activePlayer = 2;
-        } else {
-            image = UIImage(named: "cross.png")!;
-            activePlayer = 1;
+        if gameState[sender.tag] == 0 {
+            var image = UIImage();
+            gameState[sender.tag] = activePlayer;
+            if activePlayer == 1 {
+                image = UIImage(named: "nought.png")!;
+                activePlayer = 2;
+            } else {
+                image = UIImage(named: "cross.png")!;
+                activePlayer = 1;
+            }
+            // Display image for normal state
+            // We use sender to indicate the UI element that was tapped
+            sender.setImage(image, forState: .Normal);
         }
-        // Display image for normal state
-        // We use sender to indicate the UI element that was tapped
-        sender.setImage(image, forState: .Normal);
 
     }
     override func viewDidLoad() {
