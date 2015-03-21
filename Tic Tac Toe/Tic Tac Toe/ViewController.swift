@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // 1 = O, 2 = X
     var activePlayer = 1;
     
+    var gameActive = true;
     // State of the board
     // 0 = empty
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
 
     @IBAction func buttonPressed(sender: AnyObject) {
-        if gameState[sender.tag] == 0 {
+        if gameState[sender.tag] == 0 && gameActive == true {
             var image = UIImage();
             gameState[sender.tag] = activePlayer;
             if activePlayer == 1 {
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
                 // Manual check for a winner on the top row
                 if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
                     println("We have a winner!");
+                    gameActive = false;
                 }
             }
         }
