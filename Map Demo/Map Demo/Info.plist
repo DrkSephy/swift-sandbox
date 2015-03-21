@@ -28,6 +28,8 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Because I want to know where you are!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Because I always want to know where you are!</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
