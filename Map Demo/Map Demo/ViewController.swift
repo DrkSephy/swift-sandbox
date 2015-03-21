@@ -17,12 +17,12 @@ class ViewController: UIViewController, MKMapViewDelegate  {
         super.viewDidLoad()
         
         // New type: CLLocationDegrees: needed to input coordinates
-        var latitude: CLLocationDegrees = 40.7;
-        var longitude: CLLocationDegrees = -73.9;
+        var latitude: CLLocationDegrees = 43.095181;
+        var longitude: CLLocationDegrees = -79.006424;
         
         // Zoom level
-        var latDelta: CLLocationDegrees = 0.01;
-        var lonDelta: CLLocationDegrees = 0.01;
+        var latDelta: CLLocationDegrees = 0.05;
+        var lonDelta: CLLocationDegrees = 0.05;
         
         // A span is a combination of two changes in degrees
         var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta);
@@ -34,6 +34,14 @@ class ViewController: UIViewController, MKMapViewDelegate  {
         var region: MKCoordinateRegion = MKCoordinateRegionMake(location, span);
         
         map.setRegion(region, animated: true);
+        
+        // Adding annotations
+        var annotation = MKPointAnnotation();
+        
+        annotation.coordinate = location;
+        annotation.title = "Niagra Falls";
+        annotation.subtitle = "One day I'll go here..."
+        map.addAnnotation(annotation);
         
         
         
