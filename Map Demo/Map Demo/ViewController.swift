@@ -63,6 +63,25 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         println(locations);
+        
+        var userLocation: CLLocation = locations[0] as CLLocation;
+        var latitude = userLocation.coordinate.latitude;
+        var longitude = userLocation.coordinate.longitude;
+        
+        // Zoom level
+        var latDelta: CLLocationDegrees = 0.05;
+        var lonDelta: CLLocationDegrees = 0.05;
+        
+        // A span is a combination of two changes in degrees
+        var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta);
+        
+        // New type: CLLocationCoordinate2dD - a pair of coordinates
+        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude);
+        
+        // Combine the span and the location
+        var region: MKCoordinateRegion = MKCoordinateRegionMake(location, span);
+        
+        self.map.setRegion(region, animated: false);
     }
     
     func action(gestureRecognizer: UIGestureRecognizer){
