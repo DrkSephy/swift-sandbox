@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var button: UIButton!
 
+    @IBAction func buttonPressed(sender: AnyObject) {
+        var image = UIImage(named: "cross.png");
+        // Display image for normal state
+        // We use sender to indicate the UI element that was tapped
+        sender.setImage(image, forState: .Normal);
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
