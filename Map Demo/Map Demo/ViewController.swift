@@ -8,13 +8,22 @@
 
 import UIKit
 import MapKit // Needed to use map functions
+import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate  {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
 
     @IBOutlet weak var map: MKMapView!
     
+    var locationManager = CLLocationManager();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest; // Use the GPS
+        locationManager.requestWhenInUseAuthorization(); // Only request access whenever the app is running
+        locationManager.startUpdatingLocation(); // Start accessing the user's location when allowed, and let us know whenever this changes
+        
         
         // New type: CLLocationDegrees: needed to input coordinates
         var latitude: CLLocationDegrees = 43.095181;
@@ -50,6 +59,10 @@ class ViewController: UIViewController, MKMapViewDelegate  {
         map.addGestureRecognizer(longPressRecognizer);
         
         
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        println(locations);
     }
     
     func action(gestureRecognizer: UIGestureRecognizer){
