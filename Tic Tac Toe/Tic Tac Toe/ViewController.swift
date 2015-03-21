@@ -27,7 +27,11 @@ class ViewController: UIViewController {
     var winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
     
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var gameOverLabel: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
 
+    @IBAction func playAgainPressed(sender: AnyObject) {
+    }
     @IBAction func buttonPressed(sender: AnyObject) {
         if gameState[sender.tag] == 0 && gameActive == true {
             var image = UIImage();
@@ -46,11 +50,19 @@ class ViewController: UIViewController {
             for combination in winningCombinations {
                 // Manual check for a winner on the top row
                 if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
-                    if gameState[combination[0]] == 1 {
-                        println("O's has won!");
-                    } else {
-                        println("X's has won!")
-                    }
+                        var labelText = "Noughts has won!";
+                        if gameState[combination[0]] == 2 {
+                            labelText = "Crosses has won!";
+                        }
+                    
+                    gameOverLabel.text = labelText;
+                    // Working around bug to have these elements pop in
+                    gameOverLabel.hidden = false;
+                    playAgainButton.hidden = false;
+                    UIView.animateWithDuration(0.5, animations: { () -> Void in
+                        self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 400, self.gameOverLabel.center.y);
+                        self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 400, self.playAgainButton.center.y);
+                    });
                     gameActive = false;
                 }
             }
@@ -60,11 +72,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Making buttons and message appear
+        gameOverLabel.hidden = true;
+        playAgainButton.hidden = true;
+        gameOverLabel.center = CGPointMake(gameOverLabel.center.x - 400, gameOverLabel.center.y);
+        playAgainButton.center = CGPointMake(playAgainButton.center.x - 400, playAgainButton.center.y);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+
     }
 
 
