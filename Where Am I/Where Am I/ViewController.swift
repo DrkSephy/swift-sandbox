@@ -11,10 +11,20 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
-    var manager: CLLocationManager!; 
+    var manager: CLLocationManager!;
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        manager = CLLocationManager();
+        manager.delegate = self;
+        manager.desiredAccuracy = kCLLocationAccuracyBest;
+        manager.requestWhenInUseAuthorization();
+        manager.startUpdatingLocation();
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        println(locations);
     }
 
     override func didReceiveMemoryWarning() {
