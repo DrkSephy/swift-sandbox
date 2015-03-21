@@ -46,7 +46,11 @@ class ViewController: UIViewController {
             for combination in winningCombinations {
                 // Manual check for a winner on the top row
                 if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
-                    println("We have a winner!");
+                    if gameState[combination[0]] == 1 {
+                        println("O's has won!");
+                    } else {
+                        println("X's has won!")
+                    }
                     gameActive = false;
                 }
             }
