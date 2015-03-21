@@ -10,17 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    // 1 = O, 2 = X
+    var activePlayer = 1;
     
     @IBOutlet weak var button: UIButton!
 
     @IBAction func buttonPressed(sender: AnyObject) {
-        var image = UIImage(named: "cross.png");
+        var image = UIImage();
+        if activePlayer == 1 {
+            image = UIImage(named: "nought.png")!;
+            activePlayer = 2;
+        } else {
+            image = UIImage(named: "cross.png")!;
+            activePlayer = 1;
+        }
         // Display image for normal state
         // We use sender to indicate the UI element that was tapped
         sender.setImage(image, forState: .Normal);
-        // print the sender that we tapped
-        println(sender.tag);
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

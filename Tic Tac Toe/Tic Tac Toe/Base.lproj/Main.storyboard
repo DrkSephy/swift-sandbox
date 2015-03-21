@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="100" id="RdD-nm-3l9"/>
                                     <constraint firstAttribute="width" constant="100" id="cbT-rB-Mdk"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="height" constant="100" id="7KJ-lI-miO"/>
                                     <constraint firstAttribute="width" constant="100" id="vXg-YM-xPQ"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="height" constant="100" id="L0q-rg-gz5"/>
                                     <constraint firstAttribute="width" constant="100" id="Tle-Fg-feZ"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="width" constant="100" id="GCe-sa-jgH"/>
                                     <constraint firstAttribute="height" constant="100" id="Swx-xO-NRW"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -81,7 +81,7 @@
                                     <constraint firstAttribute="width" constant="100" id="2jv-JJ-sjq"/>
                                     <constraint firstAttribute="height" constant="100" id="hnt-82-7Zz"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="100" id="NHu-0A-e6d"/>
                                     <constraint firstAttribute="width" constant="100" id="gFf-Qa-ObP"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -107,7 +107,7 @@
                                     <constraint firstAttribute="width" constant="100" id="Knk-AD-O5o"/>
                                     <constraint firstAttribute="height" constant="100" id="NiG-We-jjd"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -120,7 +120,7 @@
                                     <constraint firstAttribute="width" constant="100" id="Mv9-p2-vHR"/>
                                     <constraint firstAttribute="height" constant="100" id="jK0-j1-se3"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -133,7 +133,7 @@
                                     <constraint firstAttribute="height" constant="100" id="Sr1-BN-UFt"/>
                                     <constraint firstAttribute="width" constant="100" id="ywK-lR-ttE"/>
                                 </constraints>
-                                <state key="normal" image="nought.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -178,6 +178,5 @@
     </scenes>
     <resources>
         <image name="board.png" width="744" height="783"/>
-        <image name="nought.png" width="214" height="214"/>
     </resources>
 </document>
