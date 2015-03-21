@@ -38,11 +38,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if gestureRecognizer.state == UIGestureRecognizerState.Began {
             var touchPoint = gestureRecognizer.locationInView(self.map);
             var newCoordinate = self.map.convertPoint(touchPoint, toCoordinateFromView: self.map);
-            // Add annotation
-            var annotation = MKPointAnnotation();
-            annotation.coordinate = newCoordinate;
-            annotation.title = "New Annotation";
-            self.map.addAnnotation(annotation);
+            var location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            
+            // Get location using lat/lon pair
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+                var title = "";
+                if error == nil {
+                    if let p = CLPlacemark(placemark: placemarks?[0] as CLPlacemark) {
+                        var subThoroughfare: String = "";
+                        var thoroughfare: String = "";
+                        if p.subThoroughfare != nil {
+                            subThoroughfare = p.subThoroughfare;
+                        }
+                        
+                        if p.subThoroughfare != nil {
+                            thoroughfare = p.thoroughfare;
+                        }
+                        
+                        title = "\(subThoroughfare) \(thoroughfare)"
+                        
+                    }
+                }
+                
+                if title == "" {
+                    title = "Added \(NSDate())";
+                }
+                
+                // Add annotation
+                var annotation = MKPointAnnotation();
+                annotation.coordinate = newCoordinate;
+                annotation.title = title;
+                self.map.addAnnotation(annotation);
+            })
+           
         }
     }
 
