@@ -27,7 +27,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        println(locations);
+        var userLocation: CLLocation = locations[0] as CLLocation;
+        var latitude = userLocation.coordinate.latitude;
+        var longitude = userLocation.coordinate.longitude;
+        var coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+        var latDelta: CLLocationDegrees = 0.01;
+        var lonDelta: CLLocationDegrees = 0.01;
+        var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta);
+        var region: MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span);
+        self.map.setRegion(region, animated: true);
+        
     }
     
     override func didReceiveMemoryWarning() {
