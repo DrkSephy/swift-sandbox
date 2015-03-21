@@ -31,6 +31,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var playAgainButton: UIButton!
 
     @IBAction func playAgainPressed(sender: AnyObject) {
+        // Reset game variables
+        activePlayer = 1;
+        gameActive = true;
+        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var button : UIButton;
+        for var i = 0; i < 9; i++ {
+            button = view.viewWithTag(i) as UIButton
+            button.setImage(nil, forState: .Normal);
+        }
+        gameOverLabel.hidden = true;
+        playAgainButton.hidden = true;
+        gameOverLabel.center = CGPointMake(gameOverLabel.center.x - 400, gameOverLabel.center.y);
+        playAgainButton.center = CGPointMake(playAgainButton.center.x - 400, playAgainButton.center.y);
     }
     @IBAction func buttonPressed(sender: AnyObject) {
         if gameState[sender.tag] == 0 && gameActive == true {
