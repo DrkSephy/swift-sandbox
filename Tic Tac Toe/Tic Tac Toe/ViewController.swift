@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         // Display image for normal state
         // We use sender to indicate the UI element that was tapped
         sender.setImage(image, forState: .Normal);
+        // print the sender that we tapped
+        println(sender.tag);
     }
     override func viewDidLoad() {
         super.viewDidLoad()
