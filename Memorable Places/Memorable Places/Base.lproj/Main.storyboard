@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="09K-Kf-Q0I">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -26,7 +27,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="WbQ-wp-Uko">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="dwW-df-SgP">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="dwW-df-SgP">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="show" id="x7W-OU-8og"/>
                             </connections>
@@ -64,7 +65,18 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-NQ-h67">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ab-NQ-h67" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="7HH-zV-tBW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2Ab-NQ-h67" secondAttribute="bottom" id="OFC-6k-dIL"/>
+                            <constraint firstItem="2Ab-NQ-h67" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="eBR-hB-Pz0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ab-NQ-h67" secondAttribute="trailing" constant="-16" id="xLf-5W-rqj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
