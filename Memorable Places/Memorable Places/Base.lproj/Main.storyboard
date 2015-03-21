@@ -8,13 +8,13 @@
         <!--Root View Controller-->
         <scene sceneID="oVW-Z2-7IE">
             <objects>
-                <tableViewController id="sqi-Nj-EiW" sceneMemberID="viewController">
+                <tableViewController id="sqi-Nj-EiW" customClass="TableViewController" customModule="Memorable_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xjj-IR-LgO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AJZ-22-dbk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="AJZ-22-dbk">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AJZ-22-dbk" id="BcS-zf-9Zf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -78,6 +78,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="2Ab-NQ-h67" secondAttribute="trailing" constant="-16" id="xLf-5W-rqj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="2Ab-NQ-h67" id="3Ag-0P-nyF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
