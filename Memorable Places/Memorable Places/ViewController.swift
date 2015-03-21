@@ -24,6 +24,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest;
         manager.requestWhenInUseAuthorization();
         manager.startUpdatingLocation();
+        
+        // Configure long press of 2 seconds
+        var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:");
+        uilpgr.minimumPressDuration = 2.0;
+        map.addGestureRecognizer(uilpgr);
+    }
+    
+    // Create gesture action function
+    func action(gestureRecognizer: UIGestureRecognizer) {
+        // Just check for the first indication of a particular long press
+        // Makes sure the action is only performed once
+        if gestureRecognizer.state == UIGestureRecognizerState.Began {
+            var touchPoint = gestureRecognizer.locationInView(self.map);
+            var newCoordinate = self.map.convertPoint(touchPoint, toCoordinateFromView: self.map);
+            // Add annotation
+            var annotation = MKPointAnnotation();
+            annotation.coordinate = newCoordinate;
+            annotation.title = "New Annotation";
+            self.map.addAnnotation(annotation);
+        }
     }
 
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
