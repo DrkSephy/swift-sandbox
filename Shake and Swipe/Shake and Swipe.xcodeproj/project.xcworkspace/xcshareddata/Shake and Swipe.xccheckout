@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6587AE51-2ABA-4951-A4EF-FE3696FDC6EB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Shake and Swipe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>11B70353C2ABE66179EF03EA72C5FAA2A38C5C99</key>
+		<string>https://github.com/DrkSephy/swift-sandbox.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Shake and Swipe/Shake and Swipe.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>11B70353C2ABE66179EF03EA72C5FAA2A38C5C99</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DrkSephy/swift-sandbox.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>11B70353C2ABE66179EF03EA72C5FAA2A38C5C99</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>11B70353C2ABE66179EF03EA72C5FAA2A38C5C99</string>
+			<key>IDESourceControlWCCName</key>
+			<string>swift-sandbox</string>
+		</dict>
+	</array>
+</dict>
+</plist>
