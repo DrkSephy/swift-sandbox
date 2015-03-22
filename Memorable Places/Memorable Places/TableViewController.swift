@@ -8,16 +8,20 @@
 
 import UIKit
 
+// Array containing a set of dictionaries containing a string, and another string
+var places = [Dictionary<String, String>()];
+
+var activePlace = -1;
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if places.count == 1 {
+            places.removeAtIndex(0);
+            places.append(["name" : "Taj Mahal", "lat": "27.175277", "lon": "78.042128"]);
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +40,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 3
+        return places.count;
     }
 
     
@@ -44,10 +48,14 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = "Test";
+        cell.textLabel?.text = places[indexPath.row]["name"];
         return cell
     }
     
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        activePlace = indexPath.row;
+        return indexPath; 
+    }
 
     /*
     // Override to support conditional editing of the table view.
