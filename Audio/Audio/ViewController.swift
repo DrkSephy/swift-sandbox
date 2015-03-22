@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player: AVAudioPlayer = AVAudioPlayer();
     @IBAction func play(sender: AnyObject) {
+        // NSBundle is a way to access the file structure of the app
+        var audioPath = NSBundle.mainBundle().pathForResource("explore.mp3", ofType: "mp3")!;
+        var error : NSError? = nil;
+        player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        if error == nil {
+            player.play();
+        } else {
+            println(error);
+        }
     }
     
     
