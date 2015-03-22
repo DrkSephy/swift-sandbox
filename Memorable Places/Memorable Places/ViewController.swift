@@ -36,8 +36,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Just check for the first indication of a particular long press
         // Makes sure the action is only performed once
         if gestureRecognizer.state == UIGestureRecognizerState.Began {
+            
             var touchPoint = gestureRecognizer.locationInView(self.map);
+            
             var newCoordinate = self.map.convertPoint(touchPoint, toCoordinateFromView: self.map);
+            
             var location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
             
             // Get location using lat/lon pair
@@ -47,11 +50,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     if let p = CLPlacemark(placemark: placemarks?[0] as CLPlacemark) {
                         var subThoroughfare: String = "";
                         var thoroughfare: String = "";
+                        
                         if p.subThoroughfare != nil {
                             subThoroughfare = p.subThoroughfare;
                         }
                         
-                        if p.subThoroughfare != nil {
+                        if p.thoroughfare != nil {
                             thoroughfare = p.thoroughfare;
                         }
                         
@@ -63,6 +67,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if title == "" {
                     title = "Added \(NSDate())";
                 }
+                
+                println(title);
                 
                 // Add annotation
                 var annotation = MKPointAnnotation();
