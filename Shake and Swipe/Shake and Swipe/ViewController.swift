@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(swipeRight);
     }
     
+    /* Method for detecting shakes */
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        if event.subtype == UIEventSubtype.MotionShake {
+            println("User shook the device");
+        }
+    }
+    
+    /* Method for detecting swipes */
     func swiped(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
