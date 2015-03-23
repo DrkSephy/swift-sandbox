@@ -28,6 +28,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var password: UITextField!
     
     
+    @IBOutlet weak var alreadyRegistered: UILabel!
+    
+    @IBAction func signUpButton(sender: AnyObject) {
+    }
+    
+    @IBOutlet weak var signUpLabel: UILabel!
+    
+    @IBOutlet weak var signUpToggleButton: UIButton!
+    
+    @IBAction func toggleSignUp(sender: AnyObject) {
+    
+    }
+    
+    
+   
+    
+    
     
     @IBAction func signup(sender: AnyObject) {
         var error = "";
