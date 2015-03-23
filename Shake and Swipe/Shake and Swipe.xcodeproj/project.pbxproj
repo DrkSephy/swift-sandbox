@@ -13,6 +13,10 @@
 		9372A3D41ABE6C5F004D797D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9372A3D31ABE6C5F004D797D /* Images.xcassets */; };
 		9372A3D71ABE6C5F004D797D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9372A3D51ABE6C5F004D797D /* LaunchScreen.xib */; };
 		9372A3E31ABE6C5F004D797D /* Shake_and_SwipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372A3E21ABE6C5F004D797D /* Shake_and_SwipeTests.swift */; };
+		93BFCAB61ABFA7090022FAA3 /* death.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93BFCAB51ABFA7090022FAA3 /* death.mp3 */; };
+		93BFCAB81ABFA7110022FAA3 /* get_coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93BFCAB71ABFA7110022FAA3 /* get_coin.mp3 */; };
+		93BFCABA1ABFA71A0022FAA3 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93BFCAB91ABFA71A0022FAA3 /* jump.mp3 */; };
+		93BFCABD1ABFA7270022FAA3 /* shoot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93BFCABC1ABFA7270022FAA3 /* shoot.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		9372A3DC1ABE6C5F004D797D /* Shake and SwipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shake and SwipeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9372A3E11ABE6C5F004D797D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9372A3E21ABE6C5F004D797D /* Shake_and_SwipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake_and_SwipeTests.swift; sourceTree = "<group>"; };
+		93BFCAB51ABFA7090022FAA3 /* death.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = death.mp3; sourceTree = "<group>"; };
+		93BFCAB71ABFA7110022FAA3 /* get_coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = get_coin.mp3; sourceTree = "<group>"; };
+		93BFCAB91ABFA71A0022FAA3 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump.mp3; sourceTree = "<group>"; };
+		93BFCABC1ABFA7270022FAA3 /* shoot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shoot.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +89,7 @@
 				9372A3CE1ABE6C5F004D797D /* ViewController.swift */,
 				9372A3D01ABE6C5F004D797D /* Main.storyboard */,
 				9372A3D31ABE6C5F004D797D /* Images.xcassets */,
-				9372A3D51ABE6C5F004D797D /* LaunchScreen.xib */,
+				93BFCAB41ABFA6ED0022FAA3 /* sounds */,
 				9372A3CA1ABE6C5F004D797D /* Supporting Files */,
 			);
 			path = "Shake and Swipe";
@@ -110,6 +118,18 @@
 				9372A3E11ABE6C5F004D797D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93BFCAB41ABFA6ED0022FAA3 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				93BFCAB71ABFA7110022FAA3 /* get_coin.mp3 */,
+				93BFCAB91ABFA71A0022FAA3 /* jump.mp3 */,
+				93BFCABC1ABFA7270022FAA3 /* shoot.mp3 */,
+				93BFCAB51ABFA7090022FAA3 /* death.mp3 */,
+				9372A3D51ABE6C5F004D797D /* LaunchScreen.xib */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +212,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BFCAB81ABFA7110022FAA3 /* get_coin.mp3 in Resources */,
+				93BFCABD1ABFA7270022FAA3 /* shoot.mp3 in Resources */,
 				9372A3D21ABE6C5F004D797D /* Main.storyboard in Resources */,
+				93BFCABA1ABFA71A0022FAA3 /* jump.mp3 in Resources */,
+				93BFCAB61ABFA7090022FAA3 /* death.mp3 in Resources */,
 				9372A3D71ABE6C5F004D797D /* LaunchScreen.xib in Resources */,
 				9372A3D41ABE6C5F004D797D /* Images.xcassets in Resources */,
 			);
@@ -405,6 +429,7 @@
 				9372A3E81ABE6C5F004D797D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9372A3E91ABE6C5F004D797D /* Build configuration list for PBXNativeTarget "Shake and SwipeTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +438,7 @@
 				9372A3EB1ABE6C5F004D797D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

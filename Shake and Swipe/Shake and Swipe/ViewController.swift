@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player: AVAudioPlayer = AVAudioPlayer();
     /*
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,13 @@ class ViewController: UIViewController {
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
         if event.subtype == UIEventSubtype.MotionShake {
             println("User shook the device");
+            
+            // Play a single sound
+            var fileLocation = NSBundle.mainBundle().pathForResource("get_coin", ofType: "mp3");
+            var error: NSError? = nil;
+            
+            player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: fileLocation!), error: &error);
+            player.play();
         }
     }
     
