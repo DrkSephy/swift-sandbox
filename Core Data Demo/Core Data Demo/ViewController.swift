@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject;
         
         // Create a new instance in the database
-        newUser.setValue("David", forKey: "username")
-        newUser.setValue("pass", forKey: "password");
+        // newUser.setValue("Lisa", forKey: "username")
+        // newUser.setValue("pass2", forKey: "password");
         context.save(nil);
         
         // Fetch data from our Users table
@@ -36,7 +36,14 @@ class ViewController: UIViewController {
                 // println(result.password)
                 // Accessing username
                 // println(result.username)
-                println(result);
+                if let user = result.valueForKey("username") as? String { // Force the outcome of result.password to prevent the Optional
+                    if user == "David" {
+                        context.deleteObject(result as NSManagedObject); // We need to recast result
+                        println(user + " has been deleted");
+                    }
+                }
+                context.save(nil);
+                // println(result.password); // This returns Optional(pass)
             }
         } else {
             println("No results");
