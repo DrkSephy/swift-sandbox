@@ -25,6 +25,7 @@
 		93700EED1AC0B13E004AB55C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EEC1AC0B13E004AB55C /* Security.framework */; };
 		93700EEF1AC0B144004AB55C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EEE1AC0B144004AB55C /* StoreKit.framework */; };
 		93700EF11AC0B14C004AB55C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EF01AC0B14B004AB55C /* SystemConfiguration.framework */; };
+		93700EF61AC0B4F3004AB55C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EF51AC0B4F3004AB55C /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		93700EEE1AC0B144004AB55C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		93700EF01AC0B14B004AB55C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		93700EF21AC0B18E004AB55C /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		93700EF51AC0B4F3004AB55C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93700EF61AC0B4F3004AB55C /* libsqlite3.dylib in Frameworks */,
 				93700EF11AC0B14C004AB55C /* SystemConfiguration.framework in Frameworks */,
 				93700EEF1AC0B144004AB55C /* StoreKit.framework in Frameworks */,
 				93700EED1AC0B13E004AB55C /* Security.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		93700EAC1AC0AFAC004AB55C = {
 			isa = PBXGroup;
 			children = (
+				93700EF51AC0B4F3004AB55C /* libsqlite3.dylib */,
 				93700EF01AC0B14B004AB55C /* SystemConfiguration.framework */,
 				93700EEE1AC0B144004AB55C /* StoreKit.framework */,
 				93700EEC1AC0B13E004AB55C /* Security.framework */,
