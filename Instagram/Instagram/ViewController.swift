@@ -13,6 +13,30 @@ import UIKit
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     
+    @IBOutlet weak var username: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    
+    @IBAction func signup(sender: AnyObject) {
+        var error = "";
+        // Check if username/password has not been set
+        if username.text == "" || password.text == "" {
+            error = "Please enter a username and password";
+        }
+        
+        // If there is an error, throw a message now
+        if error != "" {
+            var alert = UIAlertController(title: "Error In Form", message: error, preferredStyle: UIAlertControllerStyle.Alert);
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+                self.dismissViewControllerAnimated(true, completion: nil );
+            }));
+            self.presentViewController(alert, animated: true, completion: nil);
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
