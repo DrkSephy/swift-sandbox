@@ -12,6 +12,8 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var player: AVAudioPlayer = AVAudioPlayer();
+    // Array of sound effects
+    var sounds = ["get_coin", "jump", "shoot", "death"];
     /*
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +28,14 @@ class ViewController: UIViewController {
     /* Method for detecting shakes */
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
         if event.subtype == UIEventSubtype.MotionShake {
-            println("User shook the device");
+            
+            // Generate random number
+            var randomNumber = Int(arc4random_uniform(UInt32(sounds.count)));
+            println(randomNumber);
+            
             
             // Play a single sound
-            var fileLocation = NSBundle.mainBundle().pathForResource("get_coin", ofType: "mp3");
+            var fileLocation = NSBundle.mainBundle().pathForResource(sounds[randomNumber], ofType: "mp3");
             var error: NSError? = nil;
             
             player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: fileLocation!), error: &error);
