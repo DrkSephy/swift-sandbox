@@ -23,7 +23,7 @@ class ViewController: UIViewController {
                 println(error);
             } else {
                 // println(data); // Initially, this will return machine code, not what we want!
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary;
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary;
                 
                 println(jsonResult["isp"]);
             }
