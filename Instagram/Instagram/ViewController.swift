@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         query.getObjectInBackgroundWithId("3YxZuFD1GO") {
             (score: PFObject!, error: NSError!) -> Void in
                 if error == nil  {
-                    println(score);
+                    println(score.objectForKey("name"));
                 } else {
                     println(error);
                 }
