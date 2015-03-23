@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    /*
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right;
         self.view.addGestureRecognizer(swipeRight);
     }
+    */
     
     /* Method for detecting shakes */
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
     }
     
     /* Method for detecting swipes */
+    /*
     func swiped(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
@@ -37,6 +40,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
