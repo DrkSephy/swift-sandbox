@@ -11,7 +11,15 @@ import UIKit
 // UINavigationControllerDelegate allows us to go back and forth between the camera roll/camera and our app
 // UIImagePickerControllerDelegate allows the user to select an image
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
+    @IBOutlet weak var pickedImage: UIImageView!
+    // This image will prevent the view from closing when the user selects an image, because we overrode the method
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        println("Image Selected");
+        // To close the controller after the user selects an image, we need to do the following:
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    
     // Pick an image
     @IBAction func pickImage(sender: AnyObject) {
         var image = UIImagePickerController();
@@ -27,7 +35,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     
     
-    @IBOutlet weak var pickedImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
