@@ -12,6 +12,8 @@ import UIKit
 // UIImagePickerControllerDelegate allows the user to select an image
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView();
+    
     // Create method for custom errors
     func displayAlert(title:String, error: String) {
         var alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert);
@@ -41,9 +43,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             var user = PFUser();
             user.username = username.text;
             user.password = password.text;
+            
+            // Lock user interaction while trying to sign up
+            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50));
+            activityIndicator.center = self.view.center;
+            activityIndicator.hidesWhenStopped = true;
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray;
+            view.addSubview(activityIndicator);
+            activityIndicator.startAnimating();
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents();
+            
             // Attempt to sign the user up
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool!, signupError: NSError!) -> Void in
+                // Stop animating the spinning alert
+                self.activityIndicator.stopAnimating();
+                UIApplication.sharedApplication().endIgnoringInteractionEvents();
+                
                 if signupError == nil {
                     // Hooray! Let them use the app now.
                 } else {
