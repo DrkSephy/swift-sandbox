@@ -12,10 +12,19 @@ import UIKit
 // UIImagePickerControllerDelegate allows the user to select an image
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    // Create method for custom errors
+    func displayAlert(title:String, error: String) {
+        var alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert);
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+            self.dismissViewControllerAnimated(true, completion: nil );
+        }));
+        self.presentViewController(alert, animated: true, completion: nil);
+    }
     
     @IBOutlet weak var username: UITextField!
     
     @IBOutlet weak var password: UITextField!
+    
     
     
     @IBAction func signup(sender: AnyObject) {
@@ -27,27 +36,30 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         // If there is an error, throw a message now
         if error != "" {
-            var alert = UIAlertController(title: "Error In Form", message: error, preferredStyle: UIAlertControllerStyle.Alert);
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
-                self.dismissViewControllerAnimated(true, completion: nil );
-            }));
-            self.presentViewController(alert, animated: true, completion: nil);
+            displayAlert("Error In Form!", error: error);
         } else {
             var user = PFUser();
             user.username = username.text;
             user.password = password.text;
+            // Attempt to sign the user up
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool!, signupError: NSError!) -> Void in
                 if signupError == nil {
                     // Hooray! Let them use the app now.
                 } else {
-                    // let errorString = error.userInfo["error"] as NSString;
-                    // Show the errorString somewhere
-                    println(signupError);
+                    // Check if an error exists
+                    if let errorString = signupError.userInfo?["error"] as? NSString {
+                        error = errorString;
+                    } else {
+                        error = "Please try again later";
+                    }
+                    
+                    self.displayAlert("Could Not Sign Up", error: error);
+                    
                 }
             }
         }
-    }
+    } // End func signup
     
     
     
