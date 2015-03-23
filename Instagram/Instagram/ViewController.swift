@@ -18,6 +18,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         println("Image Selected");
         // To close the controller after the user selects an image, we need to do the following:
         self.dismissViewControllerAnimated(true, completion: nil);
+        pickedImage.image = image; // Display the picked image
     }
     
     // Pick an image
