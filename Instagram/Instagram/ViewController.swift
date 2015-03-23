@@ -8,8 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+// UINavigationControllerDelegate allows us to go back and forth between the camera roll/camera and our app
+// UIImagePickerControllerDelegate allows the user to select an image
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    // Pick an image
+    @IBAction func pickImage(sender: AnyObject) {
+        var image = UIImagePickerController();
+        // Set properties for ImagePickerController
+        image.delegate = self;
+        // The camera roll...
+        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+        // Allows the user to pan/crop before the image is used in the app
+        image.allowsEditing = false;
+        // Display the picker controller
+        self.presentViewController(image, animated: true, completion: nil);
+    }
+    
+    
+    
+    @IBOutlet weak var pickedImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Parse.setApplicationId("JfNgWLfYn0peGb6WBOLbjrFLK9wrOqMMdOY6b40n", clientKey: "EeeBNSR3ZwWy26DEXp1H2j4oa2vEVKmKe4jwAAnC");
@@ -28,7 +47,7 @@ class ViewController: UIViewController {
                 println(error);
             }
         };
-        */
+
         
         // query the "score" class
         var query = PFQuery(className: "score");
@@ -45,6 +64,9 @@ class ViewController: UIViewController {
                     println(error);
                 }
         };
+        */
+        
+        // Start importing image from User's Camera role
 
         
     }
