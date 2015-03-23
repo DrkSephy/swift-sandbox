@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         
         if results?.count > 0 {
             for result: AnyObject in results! {
+                // Accesing password
+                // println(result.password)
+                // Accessing username
+                // println(result.username)
                 println(result);
             }
         } else {
