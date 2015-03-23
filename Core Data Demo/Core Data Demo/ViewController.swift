@@ -23,6 +23,14 @@ class ViewController: UIViewController {
         newUser.setValue("David", forKey: "username")
         newUser.setValue("pass", forKey: "password");
         context.save(nil);
+        
+        // Fetch data from our Users table
+        var request = NSFetchRequest(entityName: "Users");
+        request.returnsObjectsAsFaults = false;
+        
+        var results = context.executeFetchRequest(request, error: nil);
+        
+        println(results);
     }
 
     override func didReceiveMemoryWarning() {
