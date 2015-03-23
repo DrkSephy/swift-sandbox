@@ -32,6 +32,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 self.dismissViewControllerAnimated(true, completion: nil );
             }));
             self.presentViewController(alert, animated: true, completion: nil);
+        } else {
+            var user = PFUser();
+            user.username = username.text;
+            user.password = password.text;
+            user.signUpInBackgroundWithBlock {
+                (succeeded: Bool!, signupError: NSError!) -> Void in
+                if signupError == nil {
+                    // Hooray! Let them use the app now.
+                } else {
+                    // let errorString = error.userInfo["error"] as NSString;
+                    // Show the errorString somewhere
+                    println(signupError);
+                }
+            }
         }
     }
     
