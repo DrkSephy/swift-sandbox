@@ -12,6 +12,7 @@ import UIKit
 // UIImagePickerControllerDelegate allows the user to select an image
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    
     @IBOutlet weak var pickedImage: UIImageView!
     // This image will prevent the view from closing when the user selects an image, because we overrode the method
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
@@ -35,7 +36,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     
+    // Create a spinning dial on the app while user is waiting
+    @IBAction func pause(sender: AnyObject) {
+        var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50));
+        activityIndicator.center = self.view.center; // Center spinner on screen
+        activityIndicator.hidesWhenStopped = true; // Make it disappear when app is stopped
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray; // Color the spinner
+        view.addSubview(activityIndicator); // Add spinner
+        activityIndicator.startAnimating();
+    }
     
+    @IBAction func restore(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func createAlert(sender: AnyObject) {
+        
+    }
     
     
     override func viewDidLoad() {
