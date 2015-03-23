@@ -12,6 +12,7 @@ import UIKit
 // UIImagePickerControllerDelegate allows the user to select an image
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView();
     
     @IBOutlet weak var pickedImage: UIImageView!
     // This image will prevent the view from closing when the user selects an image, because we overrode the method
@@ -38,20 +39,24 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     // Create a spinning dial on the app while user is waiting
     @IBAction func pause(sender: AnyObject) {
-        var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50));
+        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50));
         activityIndicator.center = self.view.center; // Center spinner on screen
         activityIndicator.hidesWhenStopped = true; // Make it disappear when app is stopped
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray; // Color the spinner
         view.addSubview(activityIndicator); // Add spinner
         activityIndicator.startAnimating();
+        // Disable the app when paused, user cannot click anything
+        // UIApplication.sharedApplication().beginIgnoringInteractionEvents();
     }
     
     @IBAction func restore(sender: AnyObject) {
-        
+        activityIndicator.stopAnimating();
+        // UIApplication.sharedApplication().endIgnoringInteractionEvents(); // Restart the app
     }
     
     @IBAction func createAlert(sender: AnyObject) {
-        
+        var alert = UIAlertController(title: "Hey There!", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.Alert);
+        self.presentViewController(alert, animated: true, completion: nil);
     }
     
     
