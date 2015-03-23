@@ -29,7 +29,20 @@ class ViewController: UIViewController {
             } else {
                 // Pass the data returned from the successful request
                 let image = UIImage(data: data);
-                self.madara.image = image;  
+                // self.madara.image = image;
+                
+                // Save file we downloaded, and then set the image
+                // Prevents the user from having to download the image each time
+                var documentsDirectory: String?;
+                // Will return an array of the paths of the folders that we can store our documents in
+                var paths: [AnyObject] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentationDirectory, NSSearchPathDomainMask.UserDomainMask, true);
+                
+                if paths.count > 0 {
+                    documentsDirectory = paths[0] as? String;
+                    var savePath = documentsDirectory! + "/madara,jpg";
+                    NSFileManager.defaultManager().createFileAtPath(savePath, contents: data, attributes: nil); // Save the image 
+                    self.madara.image = UIImage(named: savePath);
+                }
             }
         });
         
