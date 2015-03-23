@@ -12,8 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Parse.setApplicationId("JfNgWLfYn0peGb6WBOLbjrFLK9wrOqMMdOY6b40n", clientKey: "EeeBNSR3ZwWy26DEXp1H2j4oa2vEVKmKe4jwAAnC");
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
