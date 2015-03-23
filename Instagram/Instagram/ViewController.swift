@@ -56,6 +56,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBAction func createAlert(sender: AnyObject) {
         var alert = UIAlertController(title: "Hey There!", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.Alert);
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+            self.dismissViewControllerAnimated(true, completion: nil);
+        }));
         self.presentViewController(alert, animated: true, completion: nil);
     }
     
