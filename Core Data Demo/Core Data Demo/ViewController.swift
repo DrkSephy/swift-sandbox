@@ -42,9 +42,12 @@ class ViewController: UIViewController {
                 // Accessing username
                 // println(result.username)
                 if let user = result.valueForKey("username") as? String { // Force the outcome of result.password to prevent the Optional
-                    if user == "David" {
+                    if user == "Lisa" {
                         // context.deleteObject(result as NSManagedObject); // We need to recast result
                         // println(user + " has been deleted");
+                        
+                        // Update Lisa's password
+                        result.setValue("pass6", forKey: "password");
                     }
                 }
                 context.save(nil);
