@@ -30,7 +30,13 @@ class ViewController: UIViewController {
         
         var results = context.executeFetchRequest(request, error: nil);
         
-        println(results);
+        if results?.count > 0 {
+            for result: AnyObject in results! {
+                println(result);
+            }
+        } else {
+            println("No results");
+        }
     }
 
     override func didReceiveMemoryWarning() {
