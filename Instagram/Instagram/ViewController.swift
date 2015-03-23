@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         // Anything with a className of score will have certain characteristics
         // score is now an object - OOP
+        /*
         var score = PFObject(className: "score");
         score.setObject("David", forKey: "name"); // Added a new variable to score
         score.setObject(95, forKey: "number");
@@ -27,6 +28,20 @@ class ViewController: UIViewController {
                 println(error);
             }
         };
+        */
+        
+        // query the "score" class
+        var query = PFQuery(className: "score");
+        query.getObjectInBackgroundWithId("3YxZuFD1GO") {
+            (score: PFObject!, error: NSError!) -> Void in
+                if error == nil  {
+                    println(score);
+                } else {
+                    println(error);
+                }
+        };
+
+        
     }
     
 
