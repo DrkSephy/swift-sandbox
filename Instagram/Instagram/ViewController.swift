@@ -35,7 +35,12 @@ class ViewController: UIViewController {
         query.getObjectInBackgroundWithId("3YxZuFD1GO") {
             (score: PFObject!, error: NSError!) -> Void in
                 if error == nil  {
-                    println(score.objectForKey("name"));
+                    // Get information for one entry
+                    // We can also use score["name"] = "Lisa"
+                    // println(score.objectForKey("name"));
+                    score["name"] = "Lisa";
+                    score["number"] = 137;
+                    score.save();
                 } else {
                     println(error);
                 }
