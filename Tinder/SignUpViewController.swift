@@ -19,6 +19,13 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUp(sender: AnyObject) {
+         var user = PFUser.currentUser();
+        if genderSwitch.on {
+            user["interestedIn"] = "female";
+        } else {
+            user["interestedIn"] = "male";
+        }
+        user.saveInBackground();
     }
     
     override func viewDidLoad() {
