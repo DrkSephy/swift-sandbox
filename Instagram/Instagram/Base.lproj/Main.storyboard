@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dht-LH-jts">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xaq-7Y-UZ4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -178,16 +178,16 @@
             </objects>
             <point key="canvasLocation" x="32" y="76"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Feed Table View Controller-->
         <scene sceneID="pjU-m1-NnN">
             <objects>
-                <tableViewController id="xaq-7Y-UZ4" sceneMemberID="viewController">
+                <tableViewController id="xaq-7Y-UZ4" customClass="feedTableViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i7R-VZ-3st">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="227" id="5Hp-DT-37N">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="227" id="5Hp-DT-37N" customClass="cell" customModule="Instagram" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Hp-DT-37N" id="95R-5u-p2O">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -229,6 +229,11 @@
                                         <constraint firstItem="TmP-7j-wvG" firstAttribute="top" secondItem="95R-5u-p2O" secondAttribute="topMargin" id="v3D-Id-NbE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="postedImage" destination="95R-5u-p2O" id="mp9-c6-kXx"/>
+                                    <outlet property="title" destination="tdm-e4-9ev" id="WNg-Vz-txr"/>
+                                    <outlet property="username" destination="6vY-JN-sw5" id="pOO-v1-Eoo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

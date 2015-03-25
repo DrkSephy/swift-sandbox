@@ -12,6 +12,7 @@
 		93BC132A1AC25AD5005444B2 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC13291AC25AD5005444B2 /* postViewController.swift */; };
 		93BC132C1AC25C49005444B2 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 93BC132B1AC25C49005444B2 /* placeholder.png */; };
 		93CB1CC51AC2FDBC00D6208B /* feedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB1CC41AC2FDBC00D6208B /* feedTableViewController.swift */; };
+		93CB1CC71AC2FE7C00D6208B /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB1CC61AC2FE7C00D6208B /* cell.swift */; };
 		C8D41C4E19B46D7300CCED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */; };
 		C8D41C5019B46D7300CCED68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C4F19B46D7300CCED68 /* ViewController.swift */; };
 		C8D41C5319B46D7300CCED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D41C5119B46D7300CCED68 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		93BC13291AC25AD5005444B2 /* postViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
 		93BC132B1AC25C49005444B2 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		93CB1CC41AC2FDBC00D6208B /* feedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedTableViewController.swift; sourceTree = "<group>"; };
+		93CB1CC61AC2FE7C00D6208B /* cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
 		C8D41C4819B46D7300CCED68 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D41C4C19B46D7300CCED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				93BC132B1AC25C49005444B2 /* placeholder.png */,
 				C8D41C5119B46D7300CCED68 /* Main.storyboard */,
 				93CB1CC41AC2FDBC00D6208B /* feedTableViewController.swift */,
+				93CB1CC61AC2FE7C00D6208B /* cell.swift */,
 				93BC13291AC25AD5005444B2 /* postViewController.swift */,
 				9373B7421AC2415800CB8E29 /* UserTableViewController.swift */,
 				C8D41C5419B46D7300CCED68 /* Images.xcassets */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93BC132A1AC25AD5005444B2 /* postViewController.swift in Sources */,
+				93CB1CC71AC2FE7C00D6208B /* cell.swift in Sources */,
 				C8D41C5019B46D7300CCED68 /* ViewController.swift in Sources */,
 				9373B7431AC2415800CB8E29 /* UserTableViewController.swift in Sources */,
 				93CB1CC51AC2FDBC00D6208B /* feedTableViewController.swift in Sources */,
