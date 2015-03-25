@@ -17,23 +17,30 @@ class feedTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
         /* We now want to only show images from users that the user is following.
-         * 1. First we download all the users that the particular user is following
-         * 2. Download those images of the followed users 
+        * 1. First we download all the users that the particular user is following
+        * 2. Download those images of the followed users
         */
         
-        var getFollowedUsersQuery = PFQuery(className: "followers");
-        getFollowedUsersQuery.whereKey("follower", equalTo: PFUser.currentUser().username); // Download all users that our user is currently following
+        var getFollowedUsersQuery = PFQuery(className: "followers")
+        getFollowedUsersQuery.whereKey("follower", equalTo: PFUser.currentUser().username)
         getFollowedUsersQuery.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
-                var followedUser = "";
+                
+                var followedUser = ""
+                
                 for object in objects {
-                    followedUser = object["following"] as String;
+                    
+                    // Update - replaced as with as!
+                    
+                    followedUser = object["following"] as String
+                    
                     
                     var query = PFQuery(className:"Post")
-                    query.whereKey("username", equalTo: followedUser);
+                    query.whereKey("username", equalTo:followedUser)
                     query.findObjectsInBackgroundWithBlock {
                         (objects: [AnyObject]!, error: NSError!) -> Void in
                         if error == nil {
@@ -41,42 +48,29 @@ class feedTableViewController: UITableViewController {
                             println("Successfully retrieved \(objects.count) scores.")
                             // Do something with the found objects
                             for object in objects {
-                                // println(object["username"]);
-                                self.titles.append(object["Title"] as String);
-                                self.usernames.append(object["username"] as String);
-                                self.imageFiles.append(object["imageFile"] as PFFile);
-                                self.tableView.reloadData();
-                            }
+                                
+
+                                
+                                self.titles.append(object["Title"] as String)
+                                
+                                self.usernames.append(object["username"] as String)
                             
+                                self.imageFiles.append(object["imageFile"] as PFFile)
+                                
+                                self.tableView.reloadData()
+                                
+                            }
                         } else {
                             // Log details of the failure
-                            println(error);
+                            println(error)
                         }
                     }
-                }
-            }
-        }
-        
-        
-        var query = PFQuery(className:"Post")
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                // The find succeeded.
-                println("Successfully retrieved \(objects.count) scores.")
-                // Do something with the found objects
-                for object in objects {
-                    // println(object["username"]);
-                    self.titles.append(object["Title"] as String);
-                    self.usernames.append(object["username"] as String);
-                    self.imageFiles.append(object["imageFile"] as PFFile);
-                    self.tableView.reloadData();
+                    
+                    
                 }
                 
-            } else {
-                // Log details of the failure
-                println(error);
             }
+            
         }
     
     }
