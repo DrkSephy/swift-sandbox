@@ -198,12 +198,24 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
         
         
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /* Hide navigation bar when user logs out */
+    // This happens right before the view appears to the user
+    override func viewWillAppear(animated: Bool) {
+        // Hide navigation bar when user logs out
+        self.navigationController?.navigationBarHidden = true;
+    }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false;
+    }
+    
+    
 
 
 }
