@@ -28,6 +28,10 @@ class ViewController: UIViewController {
     
     /* Function to handle dragging */
     func wasDragged(gesture: UIPanGestureRecognizer){
+        let translation = gesture.translationInView(self.view); // Create a translation for the drag
+        var label = gesture.view!
+        label.center = CGPoint(x: label.center.x + translation.x, y: label.center.y + translation.y);
+        gesture.setTranslation(CGPointZero, inView: self.view);
         println("Dragged");
     }
 
