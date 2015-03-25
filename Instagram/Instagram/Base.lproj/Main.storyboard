@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="-1176" y="99"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Users-->
         <scene sceneID="41a-3s-Z8w">
             <objects>
                 <tableViewController id="QMN-A1-bB7" customClass="UserTableViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,12 +159,37 @@
                             <outlet property="delegate" destination="QMN-A1-bB7" id="WaE-Mx-b5V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="OvT-J5-yGc"/>
+                    <navigationItem key="navigationItem" title="Users" id="OvT-J5-yGc">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="Pyb-Sb-iJ8">
+                            <connections>
+                                <segue destination="Dht-LH-jts" kind="show" id="ywM-4e-zze"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmQ-T7-mec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nhm-4S-XMD">
+            <objects>
+                <viewController id="Dht-LH-jts" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g9Q-cq-BJe"/>
+                        <viewControllerLayoutGuide type="bottom" id="V98-hV-OQn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YE7-Py-WFq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oux-Q3-PRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="76"/>
         </scene>
         <!--NavController-->
         <scene sceneID="Qow-Nf-JZY">
