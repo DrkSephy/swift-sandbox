@@ -28,7 +28,10 @@ class UserTableViewController: UITableViewController {
             for object in objects {
                 // Grab all users from Parse database, store them inside users array
                 var user:PFUser = object as PFUser;
-                self.users.append(user.username);
+                // Only display the other users, not the current user
+                if user.username != PFUser.currentUser().username {
+                    self.users.append(user.username);
+                }
             }
             
             self.tableView.reloadData();
@@ -65,6 +68,24 @@ class UserTableViewController: UITableViewController {
         var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
         if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
             cell.accessoryType = UITableViewCellAccessoryType.None;
+            
+            // Remove followers
+            var query = PFQuery(className:"followers")
+            query.whereKey("follower", equalTo: PFUser.currentUser().username);
+            query.whereKey("following", equalTo: cell.textLabel?.text);
+            query.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]!, error: NSError!) -> Void in
+                if error == nil {
+                    for object in objects {
+                        object.deleteInBackground();
+                    }
+                    
+                } else {
+                    // Log details of the failure
+                    println(error);
+                }
+            }
+            
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
             // Create a connection for following users
