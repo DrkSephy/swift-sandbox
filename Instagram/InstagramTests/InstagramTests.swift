@@ -2,8 +2,8 @@
 //  InstagramTests.swift
 //  InstagramTests
 //
-//  Created by David Leonard on 3/23/15.
-//  Copyright (c) 2015 David Leonard. All rights reserved.
+//  Created by Rob Percival on 01/09/2014.
+//  Copyright (c) 2014 Appfish. All rights reserved.
 //
 
 import UIKit

@@ -7,86 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93700EBB1AC0AFAC004AB55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93700EBA1AC0AFAC004AB55C /* AppDelegate.swift */; };
-		93700EBD1AC0AFAC004AB55C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93700EBC1AC0AFAC004AB55C /* ViewController.swift */; };
-		93700EC01AC0AFAC004AB55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93700EBE1AC0AFAC004AB55C /* Main.storyboard */; };
-		93700EC21AC0AFAC004AB55C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93700EC11AC0AFAC004AB55C /* Images.xcassets */; };
-		93700EC51AC0AFAC004AB55C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93700EC31AC0AFAC004AB55C /* LaunchScreen.xib */; };
-		93700ED11AC0AFAD004AB55C /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93700ED01AC0AFAD004AB55C /* InstagramTests.swift */; };
-		93700EDC1AC0B069004AB55C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EDA1AC0B069004AB55C /* Bolts.framework */; };
-		93700EDD1AC0B069004AB55C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EDB1AC0B069004AB55C /* Parse.framework */; };
-		93700EDF1AC0B0C3004AB55C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EDE1AC0B0C3004AB55C /* AudioToolbox.framework */; };
-		93700EE11AC0B0C9004AB55C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EE01AC0B0C9004AB55C /* CFNetwork.framework */; };
-		93700EE31AC0B0D8004AB55C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EE21AC0B0D8004AB55C /* CoreGraphics.framework */; };
-		93700EE51AC0B0E0004AB55C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EE41AC0B0E0004AB55C /* CoreLocation.framework */; };
-		93700EE71AC0B0F2004AB55C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EE61AC0B0F2004AB55C /* libz.dylib */; };
-		93700EE91AC0B12E004AB55C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EE81AC0B12E004AB55C /* MobileCoreServices.framework */; };
-		93700EEB1AC0B136004AB55C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EEA1AC0B136004AB55C /* QuartzCore.framework */; };
-		93700EED1AC0B13E004AB55C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EEC1AC0B13E004AB55C /* Security.framework */; };
-		93700EEF1AC0B144004AB55C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EEE1AC0B144004AB55C /* StoreKit.framework */; };
-		93700EF11AC0B14C004AB55C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EF01AC0B14B004AB55C /* SystemConfiguration.framework */; };
-		93700EF61AC0B4F3004AB55C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93700EF51AC0B4F3004AB55C /* libsqlite3.dylib */; };
+		9373B7411AC23F5E00CB8E29 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9373B7401AC23F5E00CB8E29 /* libsqlite3.dylib */; };
+		C8D41C4E19B46D7300CCED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */; };
+		C8D41C5019B46D7300CCED68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C4F19B46D7300CCED68 /* ViewController.swift */; };
+		C8D41C5319B46D7300CCED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D41C5119B46D7300CCED68 /* Main.storyboard */; };
+		C8D41C5519B46D7300CCED68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D41C5419B46D7300CCED68 /* Images.xcassets */; };
+		C8D41C6119B46D7400CCED68 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C6019B46D7400CCED68 /* InstagramTests.swift */; };
+		C8D41C6C19B46DE100CCED68 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C6A19B46DE100CCED68 /* Bolts.framework */; };
+		C8D41C6D19B46DE100CCED68 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C6B19B46DE100CCED68 /* Parse.framework */; };
+		C8D41C6F19B46E9A00CCED68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C6E19B46E9A00CCED68 /* AudioToolbox.framework */; };
+		C8D41C7119B46E9F00CCED68 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7019B46E9F00CCED68 /* CFNetwork.framework */; };
+		C8D41C7319B46EA800CCED68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7219B46EA800CCED68 /* CoreGraphics.framework */; };
+		C8D41C7519B46EAD00CCED68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7419B46EAD00CCED68 /* CoreLocation.framework */; };
+		C8D41C7719B46EB700CCED68 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7619B46EB700CCED68 /* libz.dylib */; };
+		C8D41C7919B46EC100CCED68 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7819B46EC100CCED68 /* MobileCoreServices.framework */; };
+		C8D41C7B19B46EC600CCED68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7A19B46EC600CCED68 /* QuartzCore.framework */; };
+		C8D41C7D19B46ECF00CCED68 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7C19B46ECF00CCED68 /* Security.framework */; };
+		C8D41C7F19B46ED400CCED68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C7E19B46ED400CCED68 /* StoreKit.framework */; };
+		C8D41C8119B46EDB00CCED68 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D41C8019B46EDB00CCED68 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		93700ECB1AC0AFAD004AB55C /* PBXContainerItemProxy */ = {
+		C8D41C5B19B46D7300CCED68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 93700EAD1AC0AFAC004AB55C /* Project object */;
+			containerPortal = C8D41C4019B46D7300CCED68 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 93700EB41AC0AFAC004AB55C;
+			remoteGlobalIDString = C8D41C4719B46D7300CCED68;
 			remoteInfo = Instagram;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93700EB51AC0AFAC004AB55C /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93700EB91AC0AFAC004AB55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93700EBA1AC0AFAC004AB55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93700EBC1AC0AFAC004AB55C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93700EBF1AC0AFAC004AB55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93700EC11AC0AFAC004AB55C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		93700EC41AC0AFAC004AB55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		93700ECA1AC0AFAD004AB55C /* InstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93700ECF1AC0AFAD004AB55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93700ED01AC0AFAD004AB55C /* InstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
-		93700EDA1AC0B069004AB55C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		93700EDB1AC0B069004AB55C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		93700EDE1AC0B0C3004AB55C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		93700EE01AC0B0C9004AB55C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		93700EE21AC0B0D8004AB55C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		93700EE41AC0B0E0004AB55C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		93700EE61AC0B0F2004AB55C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		93700EE81AC0B12E004AB55C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		93700EEA1AC0B136004AB55C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		93700EEC1AC0B13E004AB55C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		93700EEE1AC0B144004AB55C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		93700EF01AC0B14B004AB55C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		93700EF21AC0B18E004AB55C /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = "<group>"; };
-		93700EF51AC0B4F3004AB55C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9373B7401AC23F5E00CB8E29 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		C8D41C4819B46D7300CCED68 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D41C4C19B46D7300CCED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8D41C4F19B46D7300CCED68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8D41C5219B46D7300CCED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8D41C5419B46D7300CCED68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C8D41C5A19B46D7300CCED68 /* InstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D41C5F19B46D7300CCED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D41C6019B46D7400CCED68 /* InstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
+		C8D41C6A19B46DE100CCED68 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C8D41C6B19B46DE100CCED68 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C8D41C6E19B46E9A00CCED68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C8D41C7019B46E9F00CCED68 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C8D41C7219B46EA800CCED68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C8D41C7419B46EAD00CCED68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C8D41C7619B46EB700CCED68 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C8D41C7819B46EC100CCED68 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C8D41C7A19B46EC600CCED68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C8D41C7C19B46ECF00CCED68 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C8D41C7E19B46ED400CCED68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C8D41C8019B46EDB00CCED68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C8D41C8219B46F6F00CCED68 /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93700EB21AC0AFAC004AB55C /* Frameworks */ = {
+		C8D41C4519B46D7300CCED68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93700EF61AC0B4F3004AB55C /* libsqlite3.dylib in Frameworks */,
-				93700EF11AC0B14C004AB55C /* SystemConfiguration.framework in Frameworks */,
-				93700EEF1AC0B144004AB55C /* StoreKit.framework in Frameworks */,
-				93700EED1AC0B13E004AB55C /* Security.framework in Frameworks */,
-				93700EEB1AC0B136004AB55C /* QuartzCore.framework in Frameworks */,
-				93700EE91AC0B12E004AB55C /* MobileCoreServices.framework in Frameworks */,
-				93700EE71AC0B0F2004AB55C /* libz.dylib in Frameworks */,
-				93700EE51AC0B0E0004AB55C /* CoreLocation.framework in Frameworks */,
-				93700EE31AC0B0D8004AB55C /* CoreGraphics.framework in Frameworks */,
-				93700EE11AC0B0C9004AB55C /* CFNetwork.framework in Frameworks */,
-				93700EDF1AC0B0C3004AB55C /* AudioToolbox.framework in Frameworks */,
-				93700EDD1AC0B069004AB55C /* Parse.framework in Frameworks */,
-				93700EDC1AC0B069004AB55C /* Bolts.framework in Frameworks */,
+				9373B7411AC23F5E00CB8E29 /* libsqlite3.dylib in Frameworks */,
+				C8D41C8119B46EDB00CCED68 /* SystemConfiguration.framework in Frameworks */,
+				C8D41C7F19B46ED400CCED68 /* StoreKit.framework in Frameworks */,
+				C8D41C7D19B46ECF00CCED68 /* Security.framework in Frameworks */,
+				C8D41C7B19B46EC600CCED68 /* QuartzCore.framework in Frameworks */,
+				C8D41C7919B46EC100CCED68 /* MobileCoreServices.framework in Frameworks */,
+				C8D41C7719B46EB700CCED68 /* libz.dylib in Frameworks */,
+				C8D41C7519B46EAD00CCED68 /* CoreLocation.framework in Frameworks */,
+				C8D41C7319B46EA800CCED68 /* CoreGraphics.framework in Frameworks */,
+				C8D41C7119B46E9F00CCED68 /* CFNetwork.framework in Frameworks */,
+				C8D41C6F19B46E9A00CCED68 /* AudioToolbox.framework in Frameworks */,
+				C8D41C6D19B46DE100CCED68 /* Parse.framework in Frameworks */,
+				C8D41C6C19B46DE100CCED68 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93700EC71AC0AFAD004AB55C /* Frameworks */ = {
+		C8D41C5719B46D7300CCED68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,72 +94,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		93700EAC1AC0AFAC004AB55C = {
+		C8D41C3F19B46D7300CCED68 = {
 			isa = PBXGroup;
 			children = (
-				93700EF51AC0B4F3004AB55C /* libsqlite3.dylib */,
-				93700EF01AC0B14B004AB55C /* SystemConfiguration.framework */,
-				93700EEE1AC0B144004AB55C /* StoreKit.framework */,
-				93700EEC1AC0B13E004AB55C /* Security.framework */,
-				93700EEA1AC0B136004AB55C /* QuartzCore.framework */,
-				93700EE81AC0B12E004AB55C /* MobileCoreServices.framework */,
-				93700EE61AC0B0F2004AB55C /* libz.dylib */,
-				93700EE41AC0B0E0004AB55C /* CoreLocation.framework */,
-				93700EE21AC0B0D8004AB55C /* CoreGraphics.framework */,
-				93700EE01AC0B0C9004AB55C /* CFNetwork.framework */,
-				93700EDE1AC0B0C3004AB55C /* AudioToolbox.framework */,
-				93700EB71AC0AFAC004AB55C /* Instagram */,
-				93700ECD1AC0AFAD004AB55C /* InstagramTests */,
-				93700EB61AC0AFAC004AB55C /* Products */,
-				93700EF21AC0B18E004AB55C /* Instagram-Bridging-Header.h */,
+				9373B7401AC23F5E00CB8E29 /* libsqlite3.dylib */,
+				C8D41C8019B46EDB00CCED68 /* SystemConfiguration.framework */,
+				C8D41C7E19B46ED400CCED68 /* StoreKit.framework */,
+				C8D41C7C19B46ECF00CCED68 /* Security.framework */,
+				C8D41C7A19B46EC600CCED68 /* QuartzCore.framework */,
+				C8D41C7819B46EC100CCED68 /* MobileCoreServices.framework */,
+				C8D41C7619B46EB700CCED68 /* libz.dylib */,
+				C8D41C7419B46EAD00CCED68 /* CoreLocation.framework */,
+				C8D41C7219B46EA800CCED68 /* CoreGraphics.framework */,
+				C8D41C7019B46E9F00CCED68 /* CFNetwork.framework */,
+				C8D41C6E19B46E9A00CCED68 /* AudioToolbox.framework */,
+				C8D41C4A19B46D7300CCED68 /* Instagram */,
+				C8D41C5D19B46D7300CCED68 /* InstagramTests */,
+				C8D41C4919B46D7300CCED68 /* Products */,
+				C8D41C8219B46F6F00CCED68 /* Instagram-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
-		93700EB61AC0AFAC004AB55C /* Products */ = {
+		C8D41C4919B46D7300CCED68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93700EB51AC0AFAC004AB55C /* Instagram.app */,
-				93700ECA1AC0AFAD004AB55C /* InstagramTests.xctest */,
+				C8D41C4819B46D7300CCED68 /* Instagram.app */,
+				C8D41C5A19B46D7300CCED68 /* InstagramTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93700EB71AC0AFAC004AB55C /* Instagram */ = {
+		C8D41C4A19B46D7300CCED68 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				93700EDA1AC0B069004AB55C /* Bolts.framework */,
-				93700EDB1AC0B069004AB55C /* Parse.framework */,
-				93700EBA1AC0AFAC004AB55C /* AppDelegate.swift */,
-				93700EBC1AC0AFAC004AB55C /* ViewController.swift */,
-				93700EBE1AC0AFAC004AB55C /* Main.storyboard */,
-				93700EC11AC0AFAC004AB55C /* Images.xcassets */,
-				93700EC31AC0AFAC004AB55C /* LaunchScreen.xib */,
-				93700EB81AC0AFAC004AB55C /* Supporting Files */,
+				C8D41C6A19B46DE100CCED68 /* Bolts.framework */,
+				C8D41C6B19B46DE100CCED68 /* Parse.framework */,
+				C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */,
+				C8D41C4F19B46D7300CCED68 /* ViewController.swift */,
+				C8D41C5119B46D7300CCED68 /* Main.storyboard */,
+				C8D41C5419B46D7300CCED68 /* Images.xcassets */,
+				C8D41C4B19B46D7300CCED68 /* Supporting Files */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
 		};
-		93700EB81AC0AFAC004AB55C /* Supporting Files */ = {
+		C8D41C4B19B46D7300CCED68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93700EB91AC0AFAC004AB55C /* Info.plist */,
+				C8D41C4C19B46D7300CCED68 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		93700ECD1AC0AFAD004AB55C /* InstagramTests */ = {
+		C8D41C5D19B46D7300CCED68 /* InstagramTests */ = {
 			isa = PBXGroup;
 			children = (
-				93700ED01AC0AFAD004AB55C /* InstagramTests.swift */,
-				93700ECE1AC0AFAD004AB55C /* Supporting Files */,
+				C8D41C6019B46D7400CCED68 /* InstagramTests.swift */,
+				C8D41C5E19B46D7300CCED68 /* Supporting Files */,
 			);
 			path = InstagramTests;
 			sourceTree = "<group>";
 		};
-		93700ECE1AC0AFAD004AB55C /* Supporting Files */ = {
+		C8D41C5E19B46D7300CCED68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93700ECF1AC0AFAD004AB55C /* Info.plist */,
+				C8D41C5F19B46D7300CCED68 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,13 +166,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93700EB41AC0AFAC004AB55C /* Instagram */ = {
+		C8D41C4719B46D7300CCED68 /* Instagram */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93700ED41AC0AFAD004AB55C /* Build configuration list for PBXNativeTarget "Instagram" */;
+			buildConfigurationList = C8D41C6419B46D7400CCED68 /* Build configuration list for PBXNativeTarget "Instagram" */;
 			buildPhases = (
-				93700EB11AC0AFAC004AB55C /* Sources */,
-				93700EB21AC0AFAC004AB55C /* Frameworks */,
-				93700EB31AC0AFAC004AB55C /* Resources */,
+				C8D41C4419B46D7300CCED68 /* Sources */,
+				C8D41C4519B46D7300CCED68 /* Frameworks */,
+				C8D41C4619B46D7300CCED68 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -183,46 +180,46 @@
 			);
 			name = Instagram;
 			productName = Instagram;
-			productReference = 93700EB51AC0AFAC004AB55C /* Instagram.app */;
+			productReference = C8D41C4819B46D7300CCED68 /* Instagram.app */;
 			productType = "com.apple.product-type.application";
 		};
-		93700EC91AC0AFAD004AB55C /* InstagramTests */ = {
+		C8D41C5919B46D7300CCED68 /* InstagramTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93700ED71AC0AFAD004AB55C /* Build configuration list for PBXNativeTarget "InstagramTests" */;
+			buildConfigurationList = C8D41C6719B46D7400CCED68 /* Build configuration list for PBXNativeTarget "InstagramTests" */;
 			buildPhases = (
-				93700EC61AC0AFAD004AB55C /* Sources */,
-				93700EC71AC0AFAD004AB55C /* Frameworks */,
-				93700EC81AC0AFAD004AB55C /* Resources */,
+				C8D41C5619B46D7300CCED68 /* Sources */,
+				C8D41C5719B46D7300CCED68 /* Frameworks */,
+				C8D41C5819B46D7300CCED68 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				93700ECC1AC0AFAD004AB55C /* PBXTargetDependency */,
+				C8D41C5C19B46D7300CCED68 /* PBXTargetDependency */,
 			);
 			name = InstagramTests;
 			productName = InstagramTests;
-			productReference = 93700ECA1AC0AFAD004AB55C /* InstagramTests.xctest */;
+			productReference = C8D41C5A19B46D7300CCED68 /* InstagramTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		93700EAD1AC0AFAC004AB55C /* Project object */ = {
+		C8D41C4019B46D7300CCED68 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = "David Leonard";
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Appfish;
 				TargetAttributes = {
-					93700EB41AC0AFAC004AB55C = {
-						CreatedOnToolsVersion = 6.2;
+					C8D41C4719B46D7300CCED68 = {
+						CreatedOnToolsVersion = 6.0;
 					};
-					93700EC91AC0AFAD004AB55C = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 93700EB41AC0AFAC004AB55C;
+					C8D41C5919B46D7300CCED68 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = C8D41C4719B46D7300CCED68;
 					};
 				};
 			};
-			buildConfigurationList = 93700EB01AC0AFAC004AB55C /* Build configuration list for PBXProject "Instagram" */;
+			buildConfigurationList = C8D41C4319B46D7300CCED68 /* Build configuration list for PBXProject "Instagram" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,29 +227,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 93700EAC1AC0AFAC004AB55C;
-			productRefGroup = 93700EB61AC0AFAC004AB55C /* Products */;
+			mainGroup = C8D41C3F19B46D7300CCED68;
+			productRefGroup = C8D41C4919B46D7300CCED68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93700EB41AC0AFAC004AB55C /* Instagram */,
-				93700EC91AC0AFAD004AB55C /* InstagramTests */,
+				C8D41C4719B46D7300CCED68 /* Instagram */,
+				C8D41C5919B46D7300CCED68 /* InstagramTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93700EB31AC0AFAC004AB55C /* Resources */ = {
+		C8D41C4619B46D7300CCED68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93700EC01AC0AFAC004AB55C /* Main.storyboard in Resources */,
-				93700EC51AC0AFAC004AB55C /* LaunchScreen.xib in Resources */,
-				93700EC21AC0AFAC004AB55C /* Images.xcassets in Resources */,
+				C8D41C5319B46D7300CCED68 /* Main.storyboard in Resources */,
+				C8D41C5519B46D7300CCED68 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93700EC81AC0AFAD004AB55C /* Resources */ = {
+		C8D41C5819B46D7300CCED68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,54 +258,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		93700EB11AC0AFAC004AB55C /* Sources */ = {
+		C8D41C4419B46D7300CCED68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93700EBD1AC0AFAC004AB55C /* ViewController.swift in Sources */,
-				93700EBB1AC0AFAC004AB55C /* AppDelegate.swift in Sources */,
+				C8D41C5019B46D7300CCED68 /* ViewController.swift in Sources */,
+				C8D41C4E19B46D7300CCED68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93700EC61AC0AFAD004AB55C /* Sources */ = {
+		C8D41C5619B46D7300CCED68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93700ED11AC0AFAD004AB55C /* InstagramTests.swift in Sources */,
+				C8D41C6119B46D7400CCED68 /* InstagramTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		93700ECC1AC0AFAD004AB55C /* PBXTargetDependency */ = {
+		C8D41C5C19B46D7300CCED68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93700EB41AC0AFAC004AB55C /* Instagram */;
-			targetProxy = 93700ECB1AC0AFAD004AB55C /* PBXContainerItemProxy */;
+			target = C8D41C4719B46D7300CCED68 /* Instagram */;
+			targetProxy = C8D41C5B19B46D7300CCED68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		93700EBE1AC0AFAC004AB55C /* Main.storyboard */ = {
+		C8D41C5119B46D7300CCED68 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93700EBF1AC0AFAC004AB55C /* Base */,
+				C8D41C5219B46D7300CCED68 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		93700EC31AC0AFAC004AB55C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93700EC41AC0AFAC004AB55C /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		93700ED21AC0AFAD004AB55C /* Debug */ = {
+		C8D41C6219B46D7400CCED68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -343,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -351,7 +339,7 @@
 			};
 			name = Debug;
 		};
-		93700ED31AC0AFAD004AB55C /* Release */ = {
+		C8D41C6319B46D7400CCED68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -369,7 +357,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -379,17 +367,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		93700ED51AC0AFAD004AB55C /* Debug */ = {
+		C8D41C6519B46D7400CCED68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -403,10 +392,11 @@
 			};
 			name = Debug;
 		};
-		93700ED61AC0AFAD004AB55C /* Release */ = {
+		C8D41C6619B46D7400CCED68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,7 +409,7 @@
 			};
 			name = Release;
 		};
-		93700ED81AC0AFAD004AB55C /* Debug */ = {
+		C8D41C6819B46D7400CCED68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -438,7 +428,7 @@
 			};
 			name = Debug;
 		};
-		93700ED91AC0AFAD004AB55C /* Release */ = {
+		C8D41C6919B46D7400CCED68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,32 +446,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93700EB01AC0AFAC004AB55C /* Build configuration list for PBXProject "Instagram" */ = {
+		C8D41C4319B46D7300CCED68 /* Build configuration list for PBXProject "Instagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93700ED21AC0AFAD004AB55C /* Debug */,
-				93700ED31AC0AFAD004AB55C /* Release */,
+				C8D41C6219B46D7400CCED68 /* Debug */,
+				C8D41C6319B46D7400CCED68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93700ED41AC0AFAD004AB55C /* Build configuration list for PBXNativeTarget "Instagram" */ = {
+		C8D41C6419B46D7400CCED68 /* Build configuration list for PBXNativeTarget "Instagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93700ED51AC0AFAD004AB55C /* Debug */,
-				93700ED61AC0AFAD004AB55C /* Release */,
+				C8D41C6519B46D7400CCED68 /* Debug */,
+				C8D41C6619B46D7400CCED68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		93700ED71AC0AFAD004AB55C /* Build configuration list for PBXNativeTarget "InstagramTests" */ = {
+		C8D41C6719B46D7400CCED68 /* Build configuration list for PBXNativeTarget "InstagramTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93700ED81AC0AFAD004AB55C /* Debug */,
-				93700ED91AC0AFAD004AB55C /* Release */,
+				C8D41C6819B46D7400CCED68 /* Debug */,
+				C8D41C6919B46D7400CCED68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 93700EAD1AC0AFAC004AB55C /* Project object */;
+	rootObject = C8D41C4019B46D7300CCED68 /* Project object */;
 }

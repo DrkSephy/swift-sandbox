@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Instagram
 //
-//  Created by David Leonard on 01/09/2014.
-//  Copyright (c) 2014 Appfish. All rights reserved.
+//  Created by David Leonard on 03/24/15
+//  Copyright (c) 2014 DrkSephy. All rights reserved.
 //
 
 import UIKit
@@ -185,6 +185,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
+        
+         
+        
+
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
