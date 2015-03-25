@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        /* Get User's Facebook Profile Picture */
         var FBSession = PFFacebookUtils.session();
         var accessToken = FBSession.accessTokenData.accessToken;
         let url = NSURL(string: "https://graph.facebook.com/me/picture?type=large&return_ssl_resources=1&access_token="+accessToken); // Get Facebook profile picture
@@ -32,8 +33,10 @@ class SignUpViewController: UIViewController {
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
             response, data, error in
             let image = UIImage(data: data);
-            self.profilePic.image = image; 
-            
+            self.profilePic.image = image;
+            var user = PFUser.currentUser();
+            user["image"] = data;
+            user.saveInBackground();
         });
     }
 
