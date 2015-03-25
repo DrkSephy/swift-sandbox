@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9373B7411AC23F5E00CB8E29 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9373B7401AC23F5E00CB8E29 /* libsqlite3.dylib */; };
+		9373B7431AC2415800CB8E29 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373B7421AC2415800CB8E29 /* UserTableViewController.swift */; };
 		C8D41C4E19B46D7300CCED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */; };
 		C8D41C5019B46D7300CCED68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D41C4F19B46D7300CCED68 /* ViewController.swift */; };
 		C8D41C5319B46D7300CCED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D41C5119B46D7300CCED68 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		9373B7401AC23F5E00CB8E29 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9373B7421AC2415800CB8E29 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		C8D41C4819B46D7300CCED68 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D41C4C19B46D7300CCED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				C8D41C4D19B46D7300CCED68 /* AppDelegate.swift */,
 				C8D41C4F19B46D7300CCED68 /* ViewController.swift */,
 				C8D41C5119B46D7300CCED68 /* Main.storyboard */,
+				9373B7421AC2415800CB8E29 /* UserTableViewController.swift */,
 				C8D41C5419B46D7300CCED68 /* Images.xcassets */,
 				C8D41C4B19B46D7300CCED68 /* Supporting Files */,
 			);
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8D41C5019B46D7300CCED68 /* ViewController.swift in Sources */,
+				9373B7431AC2415800CB8E29 /* UserTableViewController.swift in Sources */,
 				C8D41C4E19B46D7300CCED68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

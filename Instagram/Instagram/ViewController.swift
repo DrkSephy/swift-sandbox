@@ -185,14 +185,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
+        // Get the details of the user that is currently signed in
         
-         
-        
-
-
-        
-        
+        println(PFUser.currentUser());
     }
+        
+
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser() != nil {
+            self.performSegueWithIdentifier("jumpToUserTable", sender: self);
+        }
+    }
+        
+        
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
