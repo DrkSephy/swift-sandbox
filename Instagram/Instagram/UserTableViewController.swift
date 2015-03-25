@@ -12,8 +12,7 @@ class UserTableViewController: UITableViewController {
     
     var users = [""]
     var following = [Bool]()
-    
-    
+    var refresher: UIRefreshControl!; // Pull to refresh
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +77,18 @@ class UserTableViewController: UITableViewController {
         
         })
         
+        // Pull to refresh code
+        refresher = UIRefreshControl();
+        // Add some attributes
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh");
+        // Add a target
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged);
+        self.tableView.addSubview(refresher);
         
-        
+    }
+    
+    func refresh() {
+        println("refreshed");
     }
     
     override func didReceiveMemoryWarning() {
