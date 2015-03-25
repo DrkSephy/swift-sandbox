@@ -48,6 +48,16 @@ class ViewController: UIViewController {
         } else if label.center.x > self.view.bounds.width - 100 {
             println("Chosen");
         }
+        
+        // Reset position if user does not choose to drag all the way
+        if gesture.state == UIGestureRecognizerState.Ended {
+            label.center = CGPointMake(self.view.bounds.width / 2, self.view.bounds.height / 2); // Reset position
+            scale = max(abs(xFromCenter)/100, 1); // Reset scale
+            rotation = CGAffineTransformMakeRotation(0); // Reset rotation
+            stretch = CGAffineTransformScale(rotation, scale, scale); // Reset stretch
+            label.transform = stretch;
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
