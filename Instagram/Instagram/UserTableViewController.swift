@@ -60,4 +60,9 @@ class UserTableViewController: UITableViewController {
         cell.textLabel?.text = users[indexPath.row];
         return cell;
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+    }
 }
