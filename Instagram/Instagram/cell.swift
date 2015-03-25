@@ -2,8 +2,9 @@
 //  cell.swift
 //  Instagram
 //
-//  Created by David Leonard on 3/25/15.
+//  Created by David Leonard on 03/25/15.
 //  Copyright (c) 2015 DrkSephy. All rights reserved.
+
 //  CUSTOM CELL CLASS
 
 import UIKit
