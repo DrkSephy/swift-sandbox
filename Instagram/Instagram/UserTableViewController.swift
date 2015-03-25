@@ -2,44 +2,81 @@
 //  UserTableViewController.swift
 //  Instagram
 //
-//  Created by David Leonard on 3/24/15.
+//  Created by David Leonard on 03/24/15
 //  Copyright (c) 2015 DrkSephy. All rights reserved.
 //
 
 import UIKit
 
 class UserTableViewController: UITableViewController {
-
     
-    var users = [""];
+    var users = [""]
+    var following = [Bool]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Get the details of the user that is currently signed in
-        println(PFUser.currentUser());
+        println(PFUser.currentUser())
         
-        // Query all users in Parse database
-        var query = PFUser.query();
+        var query = PFUser.query()
         
         query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
-            self.users.removeAll(keepCapacity: true); // Get rid of all users in array
+        
+            self.users.removeAll(keepCapacity: true)
+            
             for object in objects {
-                // Grab all users from Parse database, store them inside users array
-                var user:PFUser = object as PFUser;
-                // Only display the other users, not the current user
+                
+                var user:PFUser = object as PFUser
+                
+                var isFollowing:Bool
+                
                 if user.username != PFUser.currentUser().username {
-                    self.users.append(user.username);
+                
+                    self.users.append(user.username)
+                    
+                    isFollowing = false
+                    
+                    var query = PFQuery(className:"followers")
+                    query.whereKey("follower", equalTo:PFUser.currentUser().username)
+                    query.whereKey("following", equalTo:user.username)
+                    query.findObjectsInBackgroundWithBlock {
+                        (objects: [AnyObject]!, error: NSError!) -> Void in
+                        if error == nil {
+                            
+                            for object in objects {
+                                
+                                isFollowing = true
+                                
+                            }
+                            
+                            self.following.append(isFollowing)
+                            
+                            self.tableView.reloadData()
+                            
+                        } else {
+                            // Log details of the failure
+                            println(error)
+                        }
+                    }
+                    
                 }
+                
+                
+                
+                
+                
+               
+
+                
+                
             }
             
-            self.tableView.reloadData();
             
-            
-        });
         
-        
+        })
         
         
         
@@ -51,51 +88,74 @@ class UserTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count;
+        println(following)
+        return users.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
-        cell.textLabel?.text = users[indexPath.row];
-        return cell;
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        
+        if following.count > indexPath.row {
+        
+            if following[indexPath.row] == true {
+            
+                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            
+            }
+            
+        }
+        
+        cell.textLabel?.text = users[indexPath.row]
+        
+        return cell
+        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
+        
+        
+        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        
         if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
-            cell.accessoryType = UITableViewCellAccessoryType.None;
             
-            // Remove followers
+            cell.accessoryType = UITableViewCellAccessoryType.None
+            
             var query = PFQuery(className:"followers")
-            query.whereKey("follower", equalTo: PFUser.currentUser().username);
-            query.whereKey("following", equalTo: cell.textLabel?.text);
+            query.whereKey("follower", equalTo:PFUser.currentUser().username)
+            query.whereKey("following", equalTo:cell.textLabel?.text)
             query.findObjectsInBackgroundWithBlock {
                 (objects: [AnyObject]!, error: NSError!) -> Void in
                 if error == nil {
-                    for object in objects {
-                        object.deleteInBackground();
-                    }
                     
+                    for object in objects {
+                        
+                        object.deleteInBackground()
+                        
+                    }
                 } else {
                     // Log details of the failure
-                    println(error);
+                    println(error)
                 }
             }
             
         } else {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
-            // Create a connection for following users
-            var following = PFObject(className: "followers"); // This is going to store our information about who is following who
-            following["following"] = cell.textLabel?.text; // Grab user from table
-            following["follower"] = PFUser.currentUser().username; // The follower is the current user logged in
+        
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
             
-            // Save to Parse backend
-            following.saveInBackground();
+            var following = PFObject(className: "followers")
+            following["following"] = cell.textLabel?.text
+            following["follower"] = PFUser.currentUser().username
+            
+            following.saveInBackground()
+            
         }
         
     }
+    
+    
+
 }

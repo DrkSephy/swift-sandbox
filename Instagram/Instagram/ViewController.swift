@@ -3,7 +3,7 @@
 //  Instagram
 //
 //  Created by David Leonard on 03/24/15
-//  Copyright (c) 2014 DrkSephy. All rights reserved.
+//  Copyright (c) 2015 DrkSephy. All rights reserved.
 //
 
 import UIKit
@@ -193,7 +193,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
     override func viewDidAppear(animated: Bool) {
         if PFUser.currentUser() != nil {
-            self.performSegueWithIdentifier("jumpToUserTable", sender: self);
+             self.performSegueWithIdentifier("jumpToUserTable", sender: self);
         }
     }
         
