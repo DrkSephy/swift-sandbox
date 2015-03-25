@@ -65,6 +65,17 @@ class feedTableViewController: UITableViewController {
         myCell.title.text = titles[indexPath.row];
         myCell.username.text = usernames[indexPath.row];
         myCell.sizeToFit();
+        // NOTE: By default, Parse does not download image content, to allow the rest of the page to load first
+        imageFiles[indexPath.row].getDataInBackgroundWithBlock{
+            (imageData: NSData!, error: NSError!) -> Void in
+            if error == nil {
+                let image = UIImage(data: imageData);
+                myCell.postedImage.image = image;
+            }
+            
+        }
+        
+        
         
         return myCell;
         

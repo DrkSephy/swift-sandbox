@@ -10,7 +10,8 @@ import UIKit
 
 class cell: UITableViewCell {
 
-    @IBOutlet weak var postedImage: UIView!
+   
+    @IBOutlet weak var postedImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var username: UILabel!
     

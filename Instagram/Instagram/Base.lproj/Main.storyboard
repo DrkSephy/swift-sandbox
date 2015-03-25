@@ -230,7 +230,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="postedImage" destination="95R-5u-p2O" id="mp9-c6-kXx"/>
+                                    <outlet property="postedImage" destination="TmP-7j-wvG" id="biT-VP-gMj"/>
                                     <outlet property="title" destination="tdm-e4-9ev" id="WNg-Vz-txr"/>
                                     <outlet property="username" destination="6vY-JN-sw5" id="pOO-v1-Eoo"/>
                                 </connections>
