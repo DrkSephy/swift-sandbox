@@ -63,6 +63,10 @@ class UserTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
-        cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+        if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
+            cell.accessoryType = UITableViewCellAccessoryType.None;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+        }
     }
 }
