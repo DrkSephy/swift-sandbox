@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		931878471AC34DF6000F607D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931878461AC34DF6000F607D /* Bolts.framework */; };
 		931878771AC36031000F607D /* facebooklogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 931878761AC36031000F607D /* facebooklogin.png */; };
+		931878791AC36790000F607D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931878781AC36790000F607D /* SignUpViewController.swift */; };
 		C86B0D9B19B611D800F8DF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */; };
 		C86B0D9D19B611D800F8DF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B0D9C19B611D800F8DF49 /* ViewController.swift */; };
 		C86B0DA019B611D800F8DF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86B0D9E19B611D800F8DF49 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		931878461AC34DF6000F607D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		931878761AC36031000F607D /* facebooklogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebooklogin.png; sourceTree = "<group>"; };
+		931878781AC36790000F607D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		C86B0D9519B611D800F8DF49 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86B0D9919B611D800F8DF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				C86B0DBD19B6165500F8DF49 /* Parse.framework */,
 				C86B0DBE19B6165500F8DF49 /* ParseFacebookUtils.framework */,
 				C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */,
+				931878781AC36790000F607D /* SignUpViewController.swift */,
 				931878461AC34DF6000F607D /* Bolts.framework */,
 				C86B0D9C19B611D800F8DF49 /* ViewController.swift */,
 				931878761AC36031000F607D /* facebooklogin.png */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931878791AC36790000F607D /* SignUpViewController.swift in Sources */,
 				C86B0D9D19B611D800F8DF49 /* ViewController.swift in Sources */,
 				C86B0D9B19B611D800F8DF49 /* AppDelegate.swift in Sources */,
 			);

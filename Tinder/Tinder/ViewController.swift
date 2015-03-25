@@ -10,19 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
                             
+    
+   
+    @IBOutlet weak var loginCanceledLabel: UILabel!
+    
     @IBAction func signIn(sender: AnyObject) {
         var permissions = ["public_profile"]
+        self.loginCanceledLabel.alpha = 0;
         
         // Update - added , block:
         
         PFFacebookUtils.logInWithPermissions(permissions, block: {
             (user: PFUser!, error: NSError!) -> Void in
             if user == nil {
-                NSLog("Uh oh. The user cancelled the Facebook login.")
+                NSLog("Uh oh. The user cancelled the Facebook login.");
+                self.loginCanceledLabel.alpha = 1;
             } else if user.isNew {
-                NSLog("User signed up and logged in through Facebook!")
+                NSLog("User signed up and logged in through Facebook!");
+                self.performSegueWithIdentifier("signUp", sender: self); // Perform segue
             } else {
-                NSLog("User logged in through Facebook!")
+                NSLog("User logged in through Facebook!");
+                
             }
         })
 
