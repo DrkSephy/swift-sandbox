@@ -10,10 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
                             
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    @IBAction func signIn(sender: AnyObject) {
         var permissions = ["public_profile"]
         
         // Update - added , block:
@@ -28,8 +25,14 @@ class ViewController: UIViewController {
                 NSLog("User logged in through Facebook!")
             }
         })
-        
-        
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if PFUser.currentUser() != nil {
+            println("User Logged In");
+        }
     }
 
     override func didReceiveMemoryWarning() {

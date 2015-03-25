@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		931878471AC34DF6000F607D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931878461AC34DF6000F607D /* Bolts.framework */; };
+		931878771AC36031000F607D /* facebooklogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 931878761AC36031000F607D /* facebooklogin.png */; };
 		C86B0D9B19B611D800F8DF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */; };
 		C86B0D9D19B611D800F8DF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B0D9C19B611D800F8DF49 /* ViewController.swift */; };
 		C86B0DA019B611D800F8DF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86B0D9E19B611D800F8DF49 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		931878461AC34DF6000F607D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		931878761AC36031000F607D /* facebooklogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebooklogin.png; sourceTree = "<group>"; };
 		C86B0D9519B611D800F8DF49 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86B0D9919B611D800F8DF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */,
 				931878461AC34DF6000F607D /* Bolts.framework */,
 				C86B0D9C19B611D800F8DF49 /* ViewController.swift */,
+				931878761AC36031000F607D /* facebooklogin.png */,
 				C86B0D9E19B611D800F8DF49 /* Main.storyboard */,
 				C86B0DA119B611D800F8DF49 /* Images.xcassets */,
 				C86B0D9819B611D800F8DF49 /* Supporting Files */,
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931878771AC36031000F607D /* facebooklogin.png in Resources */,
 				C86B0DA019B611D800F8DF49 /* Main.storyboard in Resources */,
 				C86B0DA219B611D800F8DF49 /* Images.xcassets in Resources */,
 			);
