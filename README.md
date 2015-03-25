@@ -14,6 +14,12 @@ As of this moment, the following applications can be found on this repository:
 * [Times Tables](https://github.com/DrkSephy/swift-sandbox/tree/master/Times%20Tables): A single-view iOS application which displays a times table for numbers 1-20 using a slider to control the value. 
 * [To Do List](https://github.com/DrkSephy/swift-sandbox/tree/master/To%20Do%20List): A tabbed iOS application which allows the user to input a list item on the second tab, and enter it using a button. The first tab displays the items, which can be deleted by swiping left. This application also has the ability to save entries, and will persist the items when the application is turned off and resumed.
 * [What's the Weather?](https://github.com/DrkSephy/swift-sandbox/tree/master/Weather): An iOS application which grabs the weather forecast from `weather-forecast.com` and displays the weather to the user. 
+* [Tic Tac Toe](https://github.com/DrkSephy/swift-sandbox/tree/master/Tic%20Tac%20Toe): An iOS recreation of Tic Tac Toe. 
+* [Where Am I?](https://github.com/DrkSephy/swift-sandbox/tree/master/Where%20Am%20I): An iOS application which allows the user to ascertain their location and will return the closest address. Uses the `Location` framework for accessing the user's location. 
+* [Memorable Places](https://github.com/DrkSephy/swift-sandbox/tree/master/Memorable%20Places): An iOS application which is built on top of the [Where Am I?](https://github.com/DrkSephy/swift-sandbox/tree/master/Where%20Am%20I) application. The user can open a map, and pin various locations which they would like to visit. These places are stored in a list where the user can tap on an item, which will segue to the map and zoom in to that location. This process is done through `reverseGeoEncoding`, which uses `latitude` and `longitude` to determine a location.
+* [Metallica](https://github.com/DrkSephy/swift-sandbox/tree/master/Metallica): An iOS application with one purpose - to play `Metallica - Master of Puppets`. Features the ability to pause, stop, reset, and set a place in the song - a good starting point for a full-featured music application.
+* [Sound Shaker](https://github.com/DrkSephy/swift-sandbox/tree/master/Shake%20and%20Swipe): An iOS application which plays a random sound effect whenever the device has been shaken.
+* [Instagram Clone](https://github.com/DrkSephy/swift-sandbox/tree/master/Instagram): An iOS Instagram clone, with loads of features and one of the largest applications I have currently built. 
 
 ### Feature Tests
 
