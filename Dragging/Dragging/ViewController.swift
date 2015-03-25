@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         label.addGestureRecognizer(gesture); // Add gesture to label
         label.userInteractionEnabled = true; // Labels by default are not meant to be interacted with
         
+        // Implement rotation based on how far user has dragged
+        var rotation:CGAffineTransform = CGAffineTransformMakeRotation(1);
+        label.transform = rotation; 
+        
     }
     
     /* Function to handle dragging */
