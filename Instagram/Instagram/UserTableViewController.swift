@@ -67,6 +67,14 @@ class UserTableViewController: UITableViewController {
             cell.accessoryType = UITableViewCellAccessoryType.None;
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+            // Create a connection for following users
+            var following = PFObject(className: "followers"); // This is going to store our information about who is following who
+            following["following"] = cell.textLabel?.text; // Grab user from table
+            following["follower"] = PFUser.currentUser().username; // The follower is the current user logged in
+            
+            // Save to Parse backend
+            following.saveInBackground();
         }
+        
     }
 }
