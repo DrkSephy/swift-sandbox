@@ -2,7 +2,7 @@
 
 An iOS Instagram clone built using Swift. This project has been quite a learning experience - dealing with multiple types of segues, user interfaces, and balancing multiple Table View Controllers, as well as learning to use the extremely powerful [Parse backend](https://parse.com/). This application contains the following features:
 
-* Dual Login/Sign Up views using Booleans to manipulate layout. Remember, [stay dry]( http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)!. 
+* Dual Login/Sign Up views using Booleans to manipulate layout. Remember, [stay dry]( http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)!
 * Custom classes to override the base `cell prototype` class provided by `TableViewController`. This is to control the contents of each cell individually on the `image feed`, as opposed on the page level. 
 * Extensive use of the [Parse backend](https://parse.com/), which was used for storing users, passwords, images, followed/following and all post content.
 * Ability to allow the user to select an image from their camrera roll using the ` UIImagePickerControllerDelegate` class.
@@ -17,7 +17,7 @@ On startup, the user is prompted by the `Sign Up` screen:
 
 Here, the user may input a `username` and `password`. By clicking `Sign Up`, the user will be registered within the `Parse` backend and stored within a `User` table. A succesful signup will _automatically segue_ the user to the _users_ view, where a list of all users of the application is displayed. 
 
-Instead of repeating the same code and writing a separate view for logging in, I went with a more concise approach of using Booleans to determine whether the user is signing up or logging in, which updates the text labels and buttons appropriate. 
+Instead of repeating the same code and writing a separate view for logging in, I went with a more concise approach of using Booleans to determine whether the user is signing up or logging in, which updates the text labels and buttons appropriately. 
 
 ![Log In Screen](login.png)
 
