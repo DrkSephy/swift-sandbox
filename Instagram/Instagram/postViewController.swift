@@ -10,6 +10,7 @@ import UIKit
 
 class postViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -29,6 +30,18 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var photoSelected: Bool = false;
     
     @IBOutlet weak var imageToPost: UIImageView!
+    
+    /* Function for logging out the user
+     * 1. Log user out of Parse backend
+     * 2. Segue back to initial view controller
+    */
+    @IBAction func logout(sender: AnyObject) {
+        // Log user out of Parse backend
+        PFUser.logOut();
+        
+        // Initiate segue to initial view controller
+        self.performSegueWithIdentifier("logout", sender: self);
+    }
     
     
     

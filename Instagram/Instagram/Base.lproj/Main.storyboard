@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dht-LH-jts">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -136,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1176" y="99"/>
+            <point key="canvasLocation" x="-798" y="76"/>
         </scene>
         <!--Users-->
         <scene sceneID="41a-3s-Z8w">
@@ -228,23 +229,37 @@
                                     <action selector="postImage:" destination="Dht-LH-jts" eventType="touchUpInside" id="NUp-yi-lEU"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3F-ng-Uqh">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Logout" id="Da2-zs-bOy">
+                                        <connections>
+                                            <action selector="logout:" destination="Dht-LH-jts" id="RB1-oV-SUL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="A6M-YX-WjN" secondAttribute="centerX" id="9Z3-Tw-25e"/>
                             <constraint firstItem="ddL-8S-Xad" firstAttribute="top" secondItem="eaG-CI-dwJ" secondAttribute="bottom" constant="25" id="D3r-NJ-dlr"/>
+                            <constraint firstItem="g3F-ng-Uqh" firstAttribute="leading" secondItem="YE7-Py-WFq" secondAttribute="leadingMargin" constant="-16" id="EaJ-2K-EWH"/>
                             <constraint firstAttribute="centerX" secondItem="L6o-0y-hG4" secondAttribute="centerX" id="FA9-6I-VFU"/>
                             <constraint firstAttribute="centerX" secondItem="ddL-8S-Xad" secondAttribute="centerX" id="LI9-97-dpH"/>
                             <constraint firstAttribute="centerX" secondItem="eaG-CI-dwJ" secondAttribute="centerX" id="XCh-yc-Yql"/>
                             <constraint firstItem="eaG-CI-dwJ" firstAttribute="top" secondItem="A6M-YX-WjN" secondAttribute="bottom" constant="24" id="bNK-vq-rX6"/>
                             <constraint firstItem="L6o-0y-hG4" firstAttribute="top" secondItem="g9Q-cq-BJe" secondAttribute="bottom" constant="28" id="bv7-L2-Ykh"/>
                             <constraint firstItem="A6M-YX-WjN" firstAttribute="top" secondItem="L6o-0y-hG4" secondAttribute="bottom" constant="33" id="enW-TS-mQh"/>
+                            <constraint firstItem="V98-hV-OQn" firstAttribute="top" secondItem="g3F-ng-Uqh" secondAttribute="bottom" id="gjJ-tc-Jjb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g3F-ng-Uqh" secondAttribute="trailing" constant="-16" id="oVE-l4-azU"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageToPost" destination="L6o-0y-hG4" id="Z2J-at-Lwm"/>
                         <outlet property="shareText" destination="eaG-CI-dwJ" id="A6F-HI-E3g"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="logout" id="KSv-2V-CFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oux-Q3-PRg" userLabel="First Responder" sceneMemberID="firstResponder"/>

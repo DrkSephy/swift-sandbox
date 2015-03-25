@@ -149,7 +149,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
                     
                     if signupError == nil {
-                        
+                        self.performSegueWithIdentifier("jumpToUserTable", sender: self);
                         println("logged in")
                         
                     } else {
