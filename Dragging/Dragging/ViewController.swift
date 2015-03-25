@@ -19,6 +19,16 @@ class ViewController: UIViewController {
         label.text = "Drag Me!";
         label.textAlignment = NSTextAlignment.Center;
         self.view.addSubview(label);
+        
+        var gesture = UIPanGestureRecognizer(target: self, action: Selector("wasDragged:")); // Recognizes drags
+        label.addGestureRecognizer(gesture); // Add gesture to label
+        label.userInteractionEnabled = true; // Labels by default are not meant to be interacted with
+        
+    }
+    
+    /* Function to handle dragging */
+    func wasDragged(gesture: UIPanGestureRecognizer){
+        println("Dragged");
     }
 
     override func didReceiveMemoryWarning() {
