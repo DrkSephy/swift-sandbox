@@ -117,7 +117,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 
                     if signupError == nil  {
                         // Hooray! Let them use the app now.
-                        
+                        self.performSegueWithIdentifier("jumpToUserTable", sender: self);
                         println("signed up")
                         
                         
