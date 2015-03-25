@@ -10,6 +10,9 @@ import UIKit
 
 class postViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     func displayAlert(title:String, error:String) {
         
         var alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert)
@@ -50,6 +53,14 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
         if error != "" {
             displayAlert("Cannot Post Image", error: error);
         } else {
+            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50));
+            activityIndicator.center = self.view.center;
+            activityIndicator.hidesWhenStopped = true;
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray;
+            view.addSubview(activityIndicator);
+            activityIndicator.startAnimating();
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents();
+            
             var post = PFObject(className: "Post"); // Store each of our images as "Post" classes
             // save the text
             post["Title"] = shareText.text;
@@ -57,6 +68,8 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
             
             post.saveInBackgroundWithBlock{(success: Bool!, error: NSError!) -> Void in
                 if success == false {
+                    self.activityIndicator.stopAnimating();
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents();
                     self.displayAlert("Could not post image!", error: "Please try again later");
                 } else {
                     let imageData = UIImagePNGRepresentation(self.imageToPost.image);
@@ -64,6 +77,8 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
                     post["imageFile"] = imageFile;
                     
                     post.saveInBackgroundWithBlock{(success: Bool!, error: NSError!) -> Void in
+                        self.activityIndicator.stopAnimating()
+                        UIApplication.sharedApplication().endIgnoringInteractionEvents()
                         if success == false {
                             self.displayAlert("Could not post image!", error: "Please try again later");
                         } else {

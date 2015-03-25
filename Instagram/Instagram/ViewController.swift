@@ -95,13 +95,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             
             
             
-            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
-            activityIndicator.center = self.view.center
-            activityIndicator.hidesWhenStopped = true
-            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-            view.addSubview(activityIndicator)
-            activityIndicator.startAnimating()
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50));
+            activityIndicator.center = self.view.center;
+            activityIndicator.hidesWhenStopped = true;
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray;
+            view.addSubview(activityIndicator);
+            activityIndicator.startAnimating();
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents();
             
             if signupActive == true {
                 
