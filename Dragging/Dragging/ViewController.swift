@@ -34,12 +34,20 @@ class ViewController: UIViewController {
         var label = gesture.view!
         
         xFromCenter += translation.x; // Increase our distance from center as we move the label
+        var scale = min(100 / abs(xFromCenter), 1); // Minimize the scale of minimization
         label.center = CGPoint(x: label.center.x + translation.x, y: label.center.y + translation.y);
         gesture.setTranslation(CGPointZero, inView: self.view);
         // Implement rotation based on how far user has dragged
         var rotation:CGAffineTransform = CGAffineTransformMakeRotation(xFromCenter / 200);
-        label.transform = rotation;
-        println("Dragged");
+        // As xFromCenter gets bigger, we want to shrink the label proportionally
+        var stretch: CGAffineTransform = CGAffineTransformScale(rotation, scale, scale);
+        label.transform = stretch;
+        
+        if label.center.x < 100 {
+            println("Not Chosen");
+        } else if label.center.x > self.view.bounds.width - 100 {
+            println("Chosen");
+        }
     }
 
     override func didReceiveMemoryWarning() {
