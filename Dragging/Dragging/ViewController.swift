@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var xFromCenter:CGFloat = 0; // How far did we translate an object?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,18 +26,19 @@ class ViewController: UIViewController {
         label.addGestureRecognizer(gesture); // Add gesture to label
         label.userInteractionEnabled = true; // Labels by default are not meant to be interacted with
         
-        // Implement rotation based on how far user has dragged
-        var rotation:CGAffineTransform = CGAffineTransformMakeRotation(1);
-        label.transform = rotation; 
-        
     }
     
     /* Function to handle dragging */
     func wasDragged(gesture: UIPanGestureRecognizer){
         let translation = gesture.translationInView(self.view); // Create a translation for the drag
         var label = gesture.view!
+        
+        xFromCenter += translation.x; // Increase our distance from center as we move the label
         label.center = CGPoint(x: label.center.x + translation.x, y: label.center.y + translation.y);
         gesture.setTranslation(CGPointZero, inView: self.view);
+        // Implement rotation based on how far user has dragged
+        var rotation:CGAffineTransform = CGAffineTransformMakeRotation(xFromCenter / 200);
+        label.transform = rotation;
         println("Dragged");
     }
 
