@@ -53,6 +53,7 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
             var post = PFObject(className: "Post"); // Store each of our images as "Post" classes
             // save the text
             post["Title"] = shareText.text;
+            post["username"] = PFUser.currentUser().username;
             
             post.saveInBackgroundWithBlock{(success: Bool!, error: NSError!) -> Void in
                 if success == false {
@@ -66,7 +67,14 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
                         if success == false {
                             self.displayAlert("Could not post image!", error: "Please try again later");
                         } else {
-                            println("Posted successfully!");
+                            self.displayAlert("success", error: "Your image has been posted successfully!");
+                            
+                            // Allow user to select an image again
+                            self.photoSelected = false;
+                            // Reset old selected photo with original one
+                            self.imageToPost.image = UIImage(named: "placeholder.png");
+                            // Reset shared text as well
+                            self.shareText.text = "";
                     }
                     
                 }
@@ -86,6 +94,12 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Allow user to select an image again
+        photoSelected = false;
+        // Reset old selected photo with original one
+        imageToPost.image = UIImage(named: "placeholder.png");
+        // Reset shared text as well
+        shareText.text = "";
 
     }
 
