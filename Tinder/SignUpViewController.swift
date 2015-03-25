@@ -23,7 +23,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var user = PFUser.currentUser();
+        
         // Do any additional setup after loading the view.
         /* Get User's Facebook Profile Picture */
         var FBSession = PFFacebookUtils.session();
@@ -32,12 +34,22 @@ class SignUpViewController: UIViewController {
         let urlRequest = NSURLRequest(URL: url!);
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
             response, data, error in
-            let image = UIImage(data: data);
-            self.profilePic.image = image;
-            var user = PFUser.currentUser();
-            user["image"] = data;
-            user.saveInBackground();
+                let image = UIImage(data: data);
+                self.profilePic.image = image;
+                user["image"] = data;
+                user.saveInBackground();
+            
+            // Get user's gender
+            FBRequestConnection.startForMeWithCompletionHandler({
+                connection, result, error in
+                println(result);
+                user["gender"] = result["gender"];
+                user["name"] = result["name"];
+                user.saveInBackground();
+            });
         });
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
