@@ -171,6 +171,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
             labelHolder.removeAllChildren(); // Remove game over label
             bird.physicsBody?.velocity = CGVectorMake(0, 0); // Set speed back to 0
+            gameOver = 0;
+            movingObjects.speed = 1; 
             
         }
     }
