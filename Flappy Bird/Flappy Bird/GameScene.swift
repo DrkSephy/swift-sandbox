@@ -11,6 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     
     var bird = SKSpriteNode(); // An entity in our game
+    var bg = SKSpriteNode();
 
     override func didMoveToView(view: SKView) {
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
@@ -24,6 +25,13 @@ class GameScene: SKScene {
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
         bird.runAction(makeBirdFlap); // Apply the animation
         self.addChild(bird);
+        
+        // Display background
+        var bgTexture = SKTexture(imageNamed: "img/bg.png");
+        bg = SKSpriteNode(texture: bgTexture);
+        bg.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame));
+        bg.size.height = self.frame.height;
+        self.addChild(bg);
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
