@@ -10,10 +10,14 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    var score = 0; // Score counter
+    var scoreLabel = SKLabelNode();
+    
     var bird = SKSpriteNode(); // An entity in our game
     var bg = SKSpriteNode();
     let birdGroup: UInt32 = 1;
     let objectGroup: UInt32 = 2;
+    let gapGroup: UInt32 = 0 << 3; // Reduce an integer to its binary representation
     var gameOver = 0;
     var movingObjects = SKNode(); // Allow us to access the pipes and background
 
@@ -21,6 +25,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self; // Set up collison delegate
         self.physicsWorld.gravity = CGVectorMake(0, -5); // Set gravity
         self.addChild(movingObjects);
+        
+        // Set up score label
+        scoreLabel.fontName = "Helvetica";
+        scoreLabel.fontSize = 60;
+        scoreLabel.text = "0";
+        scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - 70);
+        self.addChild(scoreLabel);
         
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
         var birdTexture2 = SKTexture(imageNamed: "img/flappy2.png"); // Second frame
@@ -50,13 +61,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bird = SKSpriteNode(texture: birdTexture); // Add the texture
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
         bird.runAction(makeBirdFlap); // Apply the animation
+        
         // Setup bird physics
         bird.physicsBody = SKPhysicsBody(circleOfRadius: bird.size.height / 2);
         bird.physicsBody?.dynamic = true;
         // Disable bird from rotating
         bird.physicsBody?.allowsRotation = false;
         bird.physicsBody?.categoryBitMask = birdGroup; // Add a collision category to the bird
-        bird.physicsBody?.collisionBitMask = objectGroup;
+        bird.physicsBody?.collisionBitMask = gapGroup;
         bird.physicsBody?.contactTestBitMask = objectGroup;
         bird.zPosition = 10;
         self.addChild(bird);
@@ -102,13 +114,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pipe2.physicsBody?.dynamic = false;
         pipe2.physicsBody?.categoryBitMask = objectGroup;
         movingObjects.addChild(pipe2);
+        
+        var gap = SKNode();
+        gap.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + pipeOffset);
+        gap.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(pipe1.size.width, gapHeight))
+        gap.runAction(moveAndRemovePipes);
+        gap.physicsBody?.dynamic = false;
+        gap.physicsBody?.collisionBitMask = gapGroup;
+        gap.physicsBody?.categoryBitMask = gapGroup;
+        gap.physicsBody?.contactTestBitMask = birdGroup;
+        movingObjects.addChild(gap);
+        
 
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
-        println("Contact");
-        gameOver = 1;
-        movingObjects.speed = 0; 
+        if contact.bodyA.categoryBitMask == gapGroup || contact.bodyB.categoryBitMask == gapGroup {
+            score++;
+            scoreLabel.text = "\(score)";
+        } else {
+            gameOver = 1;
+            movingObjects.speed = 0;
+        }
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
