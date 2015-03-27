@@ -145,16 +145,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score++;
             scoreLabel.text = "\(score)";
         } else {
-            gameOver = 1;
-            movingObjects.speed = 0;
+            if gameOver == 0 {
+                gameOver = 1;
+                movingObjects.speed = 0;
             
-            // Set up score label
-            gameOverLabel.fontName = "Helvetica";
-            gameOverLabel.fontSize = 30;
-            gameOverLabel.text = "Game Over! Tap to play again!";
-            gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-            gameOverLabel.zPosition = 10;
-            labelHolder.addChild(gameOverLabel);
+                // Set up score label
+                gameOverLabel.fontName = "Helvetica";
+                gameOverLabel.fontSize = 30;
+                gameOverLabel.text = "Game Over! Tap to play again!";
+                gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+                gameOverLabel.zPosition = 10;
+                labelHolder.addChild(gameOverLabel);
+            }
         }
     }
     
