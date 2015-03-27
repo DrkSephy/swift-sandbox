@@ -15,10 +15,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let birdGroup: UInt32 = 1;
     let objectGroup: UInt32 = 2;
     var gameOver = 0;
+    var movingObjects = SKNode(); // Allow us to access the pipes and background
 
     override func didMoveToView(view: SKView) {
         self.physicsWorld.contactDelegate = self; // Set up collison delegate
         self.physicsWorld.gravity = CGVectorMake(0, -5); // Set gravity
+        self.addChild(movingObjects);
         
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
         var birdTexture2 = SKTexture(imageNamed: "img/flappy2.png"); // Second frame
@@ -40,7 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bg.size.height = self.frame.height;
 
             bg.runAction(movebgForever);
-            self.addChild(bg);
+            movingObjects.addChild(bg);
             
             
         }
@@ -89,7 +91,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pipe1.physicsBody = SKPhysicsBody(rectangleOfSize: pipe1.size);
         pipe1.physicsBody?.dynamic = false;
         pipe1.physicsBody?.categoryBitMask = objectGroup;
-        self.addChild(pipe1);
+        movingObjects.addChild(pipe1);
         
         // Create pipe 2
         var pipe2Texture = SKTexture(imageNamed: "img/pipe2.png");
@@ -99,13 +101,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pipe2.physicsBody = SKPhysicsBody(rectangleOfSize: pipe2.size);
         pipe2.physicsBody?.dynamic = false;
         pipe2.physicsBody?.categoryBitMask = objectGroup;
-        self.addChild(pipe2);
+        movingObjects.addChild(pipe2);
 
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
         println("Contact");
         gameOver = 1;
+        movingObjects.speed = 0; 
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
