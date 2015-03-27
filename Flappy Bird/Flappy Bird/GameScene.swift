@@ -21,17 +21,18 @@ class GameScene: SKScene {
         var animation = SKAction.animateWithTextures([birdTexture, birdTexture2], timePerFrame: 0.1);
         var makeBirdFlap = SKAction.repeatActionForever(animation);
         
-        bird = SKSpriteNode(texture: birdTexture); // Add the texture
-        bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
-        bird.runAction(makeBirdFlap); // Apply the animation
-        self.addChild(bird);
-        
         // Display background
         var bgTexture = SKTexture(imageNamed: "img/bg.png");
         bg = SKSpriteNode(texture: bgTexture);
         bg.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame));
         bg.size.height = self.frame.height;
         self.addChild(bg);
+        
+        bird = SKSpriteNode(texture: birdTexture); // Add the texture
+        bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
+        bird.runAction(makeBirdFlap); // Apply the animation
+        self.addChild(bird);
+        
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
