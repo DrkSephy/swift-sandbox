@@ -28,7 +28,7 @@ class GameScene: SKScene {
         bg.size.height = self.frame.height;
         
         // Make the background move
-        var movebg = SKAction.moveByX(-10, y: 0, duration: 0.1);
+        var movebg = SKAction.moveByX(-900, y: 0, duration: 9);
         var movebgForever = SKAction.repeatActionForever(movebg);
         bg.runAction(movebgForever);
         self.addChild(bg);
