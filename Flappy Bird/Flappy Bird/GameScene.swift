@@ -23,18 +23,21 @@ class GameScene: SKScene {
         
         // Display background
         var bgTexture = SKTexture(imageNamed: "img/bg.png");
-        bg = SKSpriteNode(texture: bgTexture);
-        bg.position = CGPoint(x: bgTexture.size().width / 2, y: CGRectGetMidY(self.frame));
-        bg.size.height = self.frame.height;
-        
         // Make the background move
         var movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9);
         var replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0);
         var movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg])); // Make background repeat forever
         
-        bg.runAction(movebgForever);
-        self.addChild(bg);
-        
+        for var i: CGFloat = 0; i < 3; i++ {
+            bg = SKSpriteNode(texture: bgTexture);
+            bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i, y: CGRectGetMidY(self.frame));
+            bg.size.height = self.frame.height;
+
+            bg.runAction(movebgForever);
+            self.addChild(bg);
+            
+            
+        }
         bird = SKSpriteNode(texture: birdTexture); // Add the texture
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
         bird.runAction(makeBirdFlap); // Apply the animation
