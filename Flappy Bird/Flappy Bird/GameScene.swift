@@ -55,6 +55,19 @@ class GameScene: SKScene {
         
         self.addChild(ground);
         
+        // Create pipe 1
+        var pipe1Texture = SKTexture(imageNamed: "img/pipe1.png");
+        var pipe1 = SKSpriteNode(texture: pipe1Texture);
+        pipe1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) + 1000);
+        
+        self.addChild(pipe1);
+        
+        // Create pipe 2
+        var pipe2Texture = SKTexture(imageNamed: "img/pipe2.png");
+        var pipe2 = SKSpriteNode(texture: pipe2Texture);
+        pipe2.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - 1000);
+        
+        self.addChild(pipe2);
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
