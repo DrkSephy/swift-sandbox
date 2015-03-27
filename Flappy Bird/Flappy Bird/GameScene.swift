@@ -46,7 +46,8 @@ class GameScene: SKScene {
         bird.physicsBody = SKPhysicsBody(circleOfRadius: bird.size.height / 2);
         bird.physicsBody?.dynamic = true;
         // Disable bird from rotating
-        bird.physicsBody?.allowsRotation = false
+        bird.physicsBody?.allowsRotation = false;
+        bird.zPosition = 10; 
         self.addChild(bird);
         
         var ground = SKNode();
