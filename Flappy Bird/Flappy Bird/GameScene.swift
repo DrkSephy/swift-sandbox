@@ -16,6 +16,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var bird = SKSpriteNode(); // An entity in our game
     var bg = SKSpriteNode();
+    var labelHolder = SKSpriteNode();
+    
     let birdGroup: UInt32 = 1;
     let objectGroup: UInt32 = 2;
     let gapGroup: UInt32 = 0 << 3; // Reduce an integer to its binary representation
@@ -35,30 +37,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.zPosition = 10;
         self.addChild(scoreLabel);
         
+        makeBackground();
+        self.addChild(labelHolder);
+        
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
         var birdTexture2 = SKTexture(imageNamed: "img/flappy2.png"); // Second frame
         
         // Create animation
         var animation = SKAction.animateWithTextures([birdTexture, birdTexture2], timePerFrame: 0.1);
         var makeBirdFlap = SKAction.repeatActionForever(animation);
+       
         
-        // Display background
-        var bgTexture = SKTexture(imageNamed: "img/bg.png");
-        // Make the background move
-        var movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9);
-        var replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0);
-        var movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg])); // Make background repeat forever
-        
-        for var i: CGFloat = 0; i < 3; i++ {
-            bg = SKSpriteNode(texture: bgTexture);
-            bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i, y: CGRectGetMidY(self.frame));
-            bg.size.height = self.frame.height;
-
-            bg.runAction(movebgForever);
-            movingObjects.addChild(bg);
-            
-            
-        }
         
         bird = SKSpriteNode(texture: birdTexture); // Add the texture
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
@@ -83,6 +72,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(ground);
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("makePipes"), userInfo: nil, repeats: true);
+    }
+    
+    func makeBackground() {
+        
+        // Display background
+        var bgTexture = SKTexture(imageNamed: "img/bg.png");
+        // Make the background move
+        var movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9);
+        var replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0);
+        var movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg])); // Make background repeat forever
+        
+        for var i: CGFloat = 0; i < 3; i++ {
+            bg = SKSpriteNode(texture: bgTexture);
+            bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i, y: CGRectGetMidY(self.frame));
+            bg.size.height = self.frame.height;
+            
+            bg.runAction(movebgForever);
+            movingObjects.addChild(bg);
+            
+            
+        }
     }
     
     func makePipes() {
@@ -144,7 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameOverLabel.text = "Game Over! Tap to play again!";
             gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
             gameOverLabel.zPosition = 10;
-            self.addChild(gameOverLabel);
+            labelHolder.addChild(gameOverLabel);
         }
     }
     
@@ -153,6 +163,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if gameOver == 0 {
             bird.physicsBody?.velocity = CGVectorMake(0, 0); // Set speed back to 0
             bird.physicsBody?.applyImpulse(CGVectorMake(0, 50));
+        } else {
+            score = 0;
+            scoreLabel.text = "0";
+            movingObjects.removeAllChildren();
+            makeBackground();
+            bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
+            labelHolder.removeAllChildren(); // Remove game over label
+            
         }
     }
    
