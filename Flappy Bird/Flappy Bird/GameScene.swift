@@ -14,9 +14,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bg = SKSpriteNode();
     let birdGroup: UInt32 = 1;
     let objectGroup: UInt32 = 2;
+    var gameOver = 0;
 
     override func didMoveToView(view: SKView) {
         self.physicsWorld.contactDelegate = self; // Set up collison delegate
+        self.physicsWorld.gravity = CGVectorMake(0, -5); // Set gravity
         
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
         var birdTexture2 = SKTexture(imageNamed: "img/flappy2.png"); // Second frame
@@ -103,12 +105,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didBeginContact(contact: SKPhysicsContact) {
         println("Contact");
+        gameOver = 1;
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        bird.physicsBody?.velocity = CGVectorMake(0, 0); // Set speed back to 0
-        bird.physicsBody?.applyImpulse(CGVectorMake(0, 50));
+        if gameOver == 0 {
+            bird.physicsBody?.velocity = CGVectorMake(0, 0); // Set speed back to 0
+            bird.physicsBody?.applyImpulse(CGVectorMake(0, 50));
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {
