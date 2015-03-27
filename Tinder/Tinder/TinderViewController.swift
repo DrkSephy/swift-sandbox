@@ -12,8 +12,16 @@ class TinderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        println("hello");
+        // Get user's location whenever they use the app
+        PFGeoPoint.geoPointForCurrentLocationInBackground { (geopoint: PFGeoPoint!, error: NSError!) -> Void in
+            if error == nil {
+                println(geopoint);
+            } else {
+                println(error);
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +30,5 @@ class TinderViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

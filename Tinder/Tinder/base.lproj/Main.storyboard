@@ -74,7 +74,7 @@
                         <viewControllerLayoutGuide type="top" id="P4Y-D7-f8J"/>
                         <viewControllerLayoutGuide type="bottom" id="fWn-tm-hk6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4yi-ce-E9b" customClass="Tider">
+                    <view key="view" contentMode="scaleToFill" id="4yi-ce-E9b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

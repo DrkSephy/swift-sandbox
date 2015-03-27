@@ -11,6 +11,7 @@
 		931878771AC36031000F607D /* facebooklogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 931878761AC36031000F607D /* facebooklogin.png */; };
 		931878791AC36790000F607D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931878781AC36790000F607D /* SignUpViewController.swift */; };
 		938516E51AC4E3FA00997B4C /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938516E41AC4E3FA00997B4C /* TinderViewController.swift */; };
+		938516E61AC4EAAB00997B4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DC819B616D700F8DF49 /* CoreLocation.framework */; };
 		C86B0D9B19B611D800F8DF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B0D9A19B611D800F8DF49 /* AppDelegate.swift */; };
 		C86B0D9D19B611D800F8DF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B0D9C19B611D800F8DF49 /* ViewController.swift */; };
 		C86B0DA019B611D800F8DF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86B0D9E19B611D800F8DF49 /* Main.storyboard */; };
@@ -22,7 +23,6 @@
 		C86B0DC319B616C400F8DF49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DC219B616C400F8DF49 /* AudioToolbox.framework */; };
 		C86B0DC519B616C900F8DF49 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DC419B616C900F8DF49 /* CFNetwork.framework */; };
 		C86B0DC719B616D200F8DF49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DC619B616D200F8DF49 /* CoreGraphics.framework */; };
-		C86B0DC919B616D700F8DF49 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DC819B616D700F8DF49 /* CoreLocation.framework */; };
 		C86B0DCB19B616E000F8DF49 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DCA19B616E000F8DF49 /* libz.dylib */; };
 		C86B0DCD19B616E600F8DF49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DCC19B616E600F8DF49 /* MobileCoreServices.framework */; };
 		C86B0DCF19B616EE00F8DF49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B0DCE19B616EE00F8DF49 /* QuartzCore.framework */; };
@@ -76,13 +76,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938516E61AC4EAAB00997B4C /* CoreLocation.framework in Frameworks */,
 				C86B0DD519B6170300F8DF49 /* SystemConfiguration.framework in Frameworks */,
 				C86B0DD319B616FC00F8DF49 /* StoreKit.framework in Frameworks */,
 				C86B0DD119B616F300F8DF49 /* Security.framework in Frameworks */,
 				C86B0DCF19B616EE00F8DF49 /* QuartzCore.framework in Frameworks */,
 				C86B0DCD19B616E600F8DF49 /* MobileCoreServices.framework in Frameworks */,
 				C86B0DCB19B616E000F8DF49 /* libz.dylib in Frameworks */,
-				C86B0DC919B616D700F8DF49 /* CoreLocation.framework in Frameworks */,
 				C86B0DC719B616D200F8DF49 /* CoreGraphics.framework in Frameworks */,
 				C86B0DC519B616C900F8DF49 /* CFNetwork.framework in Frameworks */,
 				C86B0DC319B616C400F8DF49 /* AudioToolbox.framework in Frameworks */,
