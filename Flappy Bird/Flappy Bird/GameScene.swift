@@ -31,6 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.fontSize = 60;
         scoreLabel.text = "0";
         scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - 70);
+        scoreLabel.zPosition = 10;
         self.addChild(scoreLabel);
         
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
