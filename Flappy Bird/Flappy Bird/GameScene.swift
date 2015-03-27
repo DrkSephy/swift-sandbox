@@ -26,6 +26,11 @@ class GameScene: SKScene {
         bg = SKSpriteNode(texture: bgTexture);
         bg.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame));
         bg.size.height = self.frame.height;
+        
+        // Make the background move
+        var movebg = SKAction.moveByX(-10, y: 0, duration: 0.1);
+        var movebgForever = SKAction.repeatActionForever(movebg);
+        bg.runAction(movebgForever);
         self.addChild(bg);
         
         bird = SKSpriteNode(texture: birdTexture); // Add the texture
