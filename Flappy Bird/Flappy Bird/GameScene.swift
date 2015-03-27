@@ -41,6 +41,11 @@ class GameScene: SKScene {
         bird = SKSpriteNode(texture: birdTexture); // Add the texture
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)); // Set position
         bird.runAction(makeBirdFlap); // Apply the animation
+        // Setup bird physics
+        bird.physicsBody = SKPhysicsBody(circleOfRadius: bird.size.height / 2);
+        bird.physicsBody?.dynamic = true;
+        // Disable bird from rotating
+        bird.physicsBody?.allowsRotation = false
         self.addChild(bird);
         
     }
