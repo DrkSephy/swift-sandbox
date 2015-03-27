@@ -8,12 +8,16 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var bird = SKSpriteNode(); // An entity in our game
     var bg = SKSpriteNode();
+    let birdGroup: UInt32 = 1;
+    let objectGroup: UInt32 = 2;
 
     override func didMoveToView(view: SKView) {
+        self.physicsWorld.contactDelegate = self; // Set up collison delegate
+        
         var birdTexture = SKTexture(imageNamed: "img/flappy1.png"); // Assign an image to bird
         var birdTexture2 = SKTexture(imageNamed: "img/flappy2.png"); // Second frame
         
@@ -47,6 +51,9 @@ class GameScene: SKScene {
         bird.physicsBody?.dynamic = true;
         // Disable bird from rotating
         bird.physicsBody?.allowsRotation = false;
+        bird.physicsBody?.categoryBitMask = birdGroup; // Add a collision category to the bird
+        bird.physicsBody?.collisionBitMask = objectGroup;
+        bird.physicsBody?.contactTestBitMask = objectGroup;
         bird.zPosition = 10;
         self.addChild(bird);
         
@@ -54,7 +61,7 @@ class GameScene: SKScene {
         ground.position = CGPointMake(0, 0);
         ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, 1));
         ground.physicsBody?.dynamic = false
-        
+        ground.physicsBody?.categoryBitMask = objectGroup;
         self.addChild(ground);
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("makePipes"), userInfo: nil, repeats: true);
@@ -79,6 +86,7 @@ class GameScene: SKScene {
         pipe1.runAction(moveAndRemovePipes);
         pipe1.physicsBody = SKPhysicsBody(rectangleOfSize: pipe1.size);
         pipe1.physicsBody?.dynamic = false;
+        pipe1.physicsBody?.categoryBitMask = objectGroup;
         self.addChild(pipe1);
         
         // Create pipe 2
@@ -88,9 +96,13 @@ class GameScene: SKScene {
         pipe2.runAction(moveAndRemovePipes);
         pipe2.physicsBody = SKPhysicsBody(rectangleOfSize: pipe2.size);
         pipe2.physicsBody?.dynamic = false;
-        
+        pipe2.physicsBody?.categoryBitMask = objectGroup;
         self.addChild(pipe2);
 
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        println("Contact");
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
