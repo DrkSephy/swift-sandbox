@@ -48,6 +48,13 @@ class GameScene: SKScene {
         bird.physicsBody?.allowsRotation = false
         self.addChild(bird);
         
+        var ground = SKNode();
+        ground.position = CGPointMake(0, 0);
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, 1));
+        ground.physicsBody?.dynamic = false
+        
+        self.addChild(ground);
+        
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
