@@ -55,17 +55,20 @@ class GameScene: SKScene {
         
         self.addChild(ground);
         
+        // Create pipe gap
+        let gapHeight = bird.size.height * 4;
+        
         // Create pipe 1
         var pipe1Texture = SKTexture(imageNamed: "img/pipe1.png");
         var pipe1 = SKSpriteNode(texture: pipe1Texture);
-        pipe1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) + 1000);
+        pipe1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) + pipe1.size.height/2 + gapHeight / 2);
         
         self.addChild(pipe1);
         
         // Create pipe 2
         var pipe2Texture = SKTexture(imageNamed: "img/pipe2.png");
         var pipe2 = SKSpriteNode(texture: pipe2Texture);
-        pipe2.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - 1000);
+        pipe2.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - pipe2.size.height/2 - gapHeight / 2);
         
         self.addChild(pipe2);
     }
