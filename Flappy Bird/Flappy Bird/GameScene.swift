@@ -12,6 +12,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var score = 0; // Score counter
     var scoreLabel = SKLabelNode();
+    var gameOverLabel = SKLabelNode();
     
     var bird = SKSpriteNode(); // An entity in our game
     var bg = SKSpriteNode();
@@ -136,6 +137,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             gameOver = 1;
             movingObjects.speed = 0;
+            
+            // Set up score label
+            gameOverLabel.fontName = "Helvetica";
+            gameOverLabel.fontSize = 30;
+            gameOverLabel.text = "Game Over! Tap to play again!";
+            gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+            gameOverLabel.zPosition = 10;
+            self.addChild(gameOverLabel);
         }
     }
     
