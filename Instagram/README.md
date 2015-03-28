@@ -10,6 +10,10 @@ An iOS Instagram clone built using Swift. This project has been quite a learning
 * Filtering on the `image feed` so only content of users that the particular logged in User is following.
 * `Pull to Refresh`, implemented using the `UIRefreshControl` class which allows the user to drag the screen down to refresh content. Useful if there are many images on the user feed to download due to slow connections. 
 
+# Requirements
+
+* Bolts framework
+
 
 On startup, the user is prompted by the `Sign Up` screen: 
 
