@@ -37,7 +37,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta);
             var region: MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span);
             self.map.setRegion(region, animated: true);
-            
+            print(longitude);
             // Add annotation
             var annotation = MKPointAnnotation();
             annotation.coordinate = coordinate;
@@ -64,12 +64,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             var newCoordinate = self.map.convertPoint(touchPoint, toCoordinateFromView: self.map);
             
             var location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            print(location.coordinate.latitude);
+            print(location.coordinate.longitude);
+            print(location.horizontalAccuracy);
+            print(location.verticalAccuracy);
+            var latitude = "\(location.coordinate.latitude)";
+            var longitude = "\(location.coordinate.longitude)";
+            var horizontalAccuracy = "\(location.horizontalAccuracy)"
+            var verticalAccuracy = "\(location.verticalAccuracy)"
+            let latitude2 = NSString(string: latitude).doubleValue;
+            let longitude2 = NSString(string: longitude).doubleValue;
+            let horizontalAccuracy2 = NSString(string: horizontalAccuracy).floatValue;
+            let verticalAccuracy2 = NSString(string: verticalAccuracy).floatValue;
+            Flurry.setLatitude(latitude2, longitude: longitude2, horizontalAccuracy: horizontalAccuracy2, verticalAccuracy: verticalAccuracy2);
             
             // Get location using lat/lon pair
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
                 var title = "";
                 if error == nil {
-                    if let p = CLPlacemark(placemark: placemarks?[0] as CLPlacemark) {
+                    if let p = CLPlacemark(placemark: placemarks?[0] as! CLPlacemark) {
                         var subThoroughfare: String = "";
                         var thoroughfare: String = "";
                         
@@ -103,7 +116,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        var userLocation: CLLocation = locations[0] as CLLocation;
+        var userLocation: CLLocation = locations[0] as! CLLocation;
         var latitude = userLocation.coordinate.latitude;
         var longitude = userLocation.coordinate.longitude;
         var coordinate = CLLocationCoordinate2DMake(latitude, longitude);
